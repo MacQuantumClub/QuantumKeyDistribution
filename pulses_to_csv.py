@@ -1,4 +1,4 @@
-# Live script to read rectangular pulses from oscilloscope
+# Live PyVISA script to read rectangular pulses from oscilloscope
 # and write detected pulses to CSV file
 
 import pyvisa
