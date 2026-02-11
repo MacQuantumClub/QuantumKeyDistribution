@@ -1,0 +1,850 @@
+Command: /home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/dani/Documents/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/dani/esp-tsf-time-sync/slave/esp-tsf-time-sync.elf /home/dani/esp-tsf-time-sync/slave/bootloader/bootloader.elf -m '/home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/dani/Documents/esp/esp-idf/tools/idf.py' '-B' 'slave' '-DSDKCONFIG_DEFAULTS=sdkconfig.defaults;sdkconfig.defaults.slave' '-p' '/dev/ttyUSB1'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Feb  3 2026 22:21:52[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1927ch (103036) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=000292a4 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0002d1cc vaddr=40080000 size=02e4ch ( 11852) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7ce64h (511588) map[0m
+[0;32mI (309) esp_image: segment 4: paddr=000ace8c vaddr=40082e4c size=15f58h ( 89944) load[0m
+[0;32mI (345) esp_image: segment 5: paddr=000c2dec vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (357) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (357) boot: Disabling RNG early entropy source...[0m
+[0;32mI (367) cpu_start: Multicore app[0m
+[0;32mI (376) cpu_start: Pro cpu start user code[0m
+[0;32mI (376) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (376) app_init: Application information:[0m
+[0;32mI (376) app_init: Project name:     esp-tsf-time-sync[0m
+[0;32mI (381) app_init: App version:      1[0m
+[0;32mI (384) app_init: Compile time:     Feb  3 2026 22:26:48[0m
+[0;32mI (389) app_init: ELF file SHA256:  a96e33164...[0m
+[0;32mI (394) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (397) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (401) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (405) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (409) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (415) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFB7F88 len 00028078 (160 KiB): DRAM[0m
+[0;32mI (426) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (431) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (437) heap_init: At 40098DA4 len 0000725C (28 KiB): IRAM[0m
+[0;33mW (443) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (455) spi_flash: detected chip: generic[0m
+[0;32mI (458) spi_flash: flash io: dio[0m
+[0;33mW (461) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (475) main_task: Started on CPU0[0m
+[0;32mI (485) main_task: Calling app_main()[0m
+[0;32mI (505) main: ESP_WIFI_MODE_STA[0m
+[0;32mI (515) wifi:wifi driver task: 3ffbff84, prio:23, stack:6656, core=0[0m
+[0;32mI (525) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (525) wifi:wifi certification version: v7.0[0m
+[0;32mI (525) wifi:config NVS flash: enabled[0m
+[0;32mI (525) wifi:config nano formatting: disabled[0m
+[0;32mI (535) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (535) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (535) wifi:Init management short buffer num: 32[0m
+[0;32mI (545) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (545) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (555) wifi:Init static rx buffer num: 10[0m
+[0;32mI (555) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (565) wifi_init: rx ba win: 6[0m
+[0;32mI (565) wifi_init: accept mbox: 6[0m
+[0;32mI (565) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp tx win: 5760[0m
+[0;32mI (575) wifi_init: tcp rx win: 5760[0m
+[0;32mI (575) wifi_init: tcp mss: 1440[0m
+[0;32mI (585) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (585) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (595) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (685) wifi:mode : sta (40:22:d8:5a:4a:08)[0m
+[0;32mI (685) wifi:enable tsf[0m
+[0;32mI (685) wifi station: wifi_init_sta finished.[0m
+[0;32mI (765) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (765) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1955) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1975) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1985) wifi:connected with Pixel_6085, aid = 2, channel 10, BW20, bssid = 36:0c:8c:ca:91:fb[0m
+[0;32mI (1995) wifi:security: WPA3-SAE, phy: bgn, rssi: -51[0m
+[0;32mI (1995) wifi:pm start, type: 1[0m
+
+[0;32mI (1995) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2065) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2065) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (7015) esp_netif_handlers: sta ip: 10.45.216.230, mask: 255.255.255.0, gw: 10.45.216.170[0m
+[0;32mI (7015) wifi station: got ip:10.45.216.230[0m
+[0;32mI (7015) wifi station: connected to ap SSID:Pixel_6085 password:2601195007[0m
+[0;32mI (7025) main: Reading Time[0m
+[0;32mI (7025) main_task: Returned from app_main()[0m
+[0;32mI (7525) RX_TASK: Read 1024 bytes: timestamped: '67504596772394619', calculated delay: '2247'[0m
+[0;32mI (7535) RX_TASK: 0x3ffc8aac   7b 16 53 b7 12 d3 ef 00  14 26 53 b7 12 d3 ef 00  |{.S......&S.....|[0m
+[0;32mI (7535) RX_TASK: 0x3ffc8abc   ad 35 53 b7 12 d3 ef 00  46 45 53 b7 12 d3 ef 00  |.5S.....FES.....|[0m
+[0;32mI (7545) RX_TASK: 0x3ffc8acc   8a 55 53 b7 12 d3 ef 00  7f 64 53 b7 12 d3 ef 00  |.US......dS.....|[0m
+[0;32mI (7555) RX_TASK: 0x3ffc8adc   c9 76 53 b7 12 d3 ef 00  96 84 53 b7 12 d3 ef 00  |.vS.......S.....|[0m
+[0;32mI (7565) RX_TASK: 0x3ffc8aec   2f 94 53 b7 12 d3 ef 00  c5 a3 53 b7 12 d3 ef 00  |/.S.......S.....|[0m
+[0;32mI (7575) RX_TASK: 0x3ffc8afc   61 b3 53 b7 12 d3 ef 00  ff c2 53 b7 12 d3 ef 00  |a.S.......S.....|[0m
+[0;32mI (7585) RX_TASK: 0x3ffc8b0c   93 d2 53 b7 12 d3 ef 00  29 e2 53 b7 12 d3 ef 00  |..S.....).S.....|[0m
+[0;32mI (7585) RX_TASK: 0x3ffc8b1c   c5 f1 53 b7 12 d3 ef 00  5b 01 54 b7 12 d3 ef 00  |..S.....[.T.....|[0m
+[0;32mI (7595) RX_TASK: 0x3ffc8b2c   ff 10 54 b7 12 d3 ef 00  8d 20 54 b7 12 d3 ef 00  |..T...... T.....|[0m
+[0;32mI (7605) RX_TASK: 0x3ffc8b3c   29 30 54 b7 12 d3 ef 00  bf 3f 54 b7 12 d3 ef 00  |)0T......?T.....|[0m
+[0;32mI (7615) RX_TASK: 0x3ffc8b4c   5b 4f 54 b7 12 d3 ef 00  f9 5e 54 b7 12 d3 ef 00  |[OT......^T.....|[0m
+[0;32mI (7625) RX_TASK: 0x3ffc8b5c   8d 6e 54 b7 12 d3 ef 00  23 7e 54 b7 12 d3 ef 00  |.nT.....#~T.....|[0m
+[0;32mI (7635) RX_TASK: 0x3ffc8b6c   bf 8d 54 b7 12 d3 ef 00  55 9d 54 b7 12 d3 ef 00  |..T.....U.T.....|[0m
+[0;32mI (7645) RX_TASK: 0x3ffc8b7c   fa ac 54 b7 12 d3 ef 00  87 bc 54 b7 12 d3 ef 00  |..T.......T.....|[0m
+[0;32mI (7655) RX_TASK: 0x3ffc8b8c   23 cc 54 b7 12 d3 ef 00  b9 db 54 b7 12 d3 ef 00  |#.T.......T.....|[0m
+[0;32mI (7655) RX_TASK: 0x3ffc8b9c   55 eb 54 b7 12 d3 ef 00  f1 fa 54 b7 12 d3 ef 00  |U.T.......T.....|[0m
+[0;32mI (7665) RX_TASK: 0x3ffc8bac   87 0a 55 b7 12 d3 ef 00  1d 1a 55 b7 12 d3 ef 00  |..U.......U.....|[0m
+[0;32mI (7675) RX_TASK: 0x3ffc8bbc   b9 29 55 b7 12 d3 ef 00  4f 39 55 b7 12 d3 ef 00  |.)U.....O9U.....|[0m
+[0;32mI (7685) RX_TASK: 0x3ffc8bcc   eb 48 55 b7 12 d3 ef 00  9b 59 55 b7 12 d3 ef 00  |.HU......YU.....|[0m
+[0;32mI (7695) RX_TASK: 0x3ffc8bdc   9d 68 55 b7 12 d3 ef 00  32 78 55 b7 12 d3 ef 00  |.hU.....2xU.....|[0m
+[0;32mI (7705) RX_TASK: 0x3ffc8bec   8d 86 55 b7 12 d3 ef 00  03 96 55 b7 12 d3 ef 00  |..U.......U.....|[0m
+[0;32mI (7715) RX_TASK: 0x3ffc8bfc   94 a5 55 b7 12 d3 ef 00  2d b5 55 b7 12 d3 ef 00  |..U.....-.U.....|[0m
+[0;32mI (7725) RX_TASK: 0x3ffc8c0c   c6 c4 55 b7 12 d3 ef 00  de d6 55 b7 12 d3 ef 00  |..U.......U.....|[0m
+[0;32mI (7725) RX_TASK: 0x3ffc8c1c   a5 e5 55 b7 12 d3 ef 00  fe f4 55 b7 12 d3 ef 00  |..U.......U.....|[0m
+[0;32mI (7735) RX_TASK: 0x3ffc8c2c   97 04 56 b7 12 d3 ef 00  30 14 56 b7 12 d3 ef 00  |..V.....0.V.....|[0m
+[0;32mI (7745) RX_TASK: 0x3ffc8c3c   c9 23 56 b7 12 d3 ef 00  6a 33 56 b7 12 d3 ef 00  |.#V.....j3V.....|[0m
+[0;32mI (7755) RX_TASK: 0x3ffc8c4c   fb 42 56 b7 12 d3 ef 00  94 52 56 b7 12 d3 ef 00  |.BV......RV.....|[0m
+[0;32mI (7765) RX_TASK: 0x3ffc8c5c   2d 62 56 b7 12 d3 ef 00  c6 71 56 b7 12 d3 ef 00  |-bV......qV.....|[0m
+[0;32mI (7775) RX_TASK: 0x3ffc8c6c   5f 81 56 b7 12 d3 ef 00  f8 90 56 b7 12 d3 ef 00  |_.V.......V.....|[0m
+[0;32mI (7785) RX_TASK: 0x3ffc8c7c   91 a0 56 b7 12 d3 ef 00  2a b0 56 b7 12 d3 ef 00  |..V.....*.V.....|[0m
+[0;32mI (7795) RX_TASK: 0x3ffc8c8c   c3 bf 56 b7 12 d3 ef 00  5c cf 56 b7 12 d3 ef 00  |..V.....\.V.....|[0m
+[0;32mI (7795) RX_TASK: 0x3ffc8c9c   f5 de 56 b7 12 d3 ef 00  8e ee 56 b7 12 d3 ef 00  |..V.......V.....|[0m
+[0;32mI (7805) RX_TASK: 0x3ffc8cac   27 fe 56 b7 12 d3 ef 00  c0 0d 57 b7 12 d3 ef 00  |'.V.......W.....|[0m
+[0;32mI (7815) RX_TASK: 0x3ffc8cbc   59 1d 57 b7 12 d3 ef 00  f2 2c 57 b7 12 d3 ef 00  |Y.W......,W.....|[0m
+[0;32mI (7825) RX_TASK: 0x3ffc8ccc   8b 3c 57 b7 12 d3 ef 00  25 4c 57 b7 12 d3 ef 00  |.<W.....%LW.....|[0m
+[0;32mI (7835) RX_TASK: 0x3ffc8cdc   bd 5b 57 b7 12 d3 ef 00  56 6b 57 b7 12 d3 ef 00  |.[W.....VkW.....|[0m
+[0;32mI (7845) RX_TASK: 0x3ffc8cec   ef 7a 57 b7 12 d3 ef 00  88 8a 57 b7 12 d3 ef 00  |.zW.......W.....|[0m
+[0;32mI (7855) RX_TASK: 0x3ffc8cfc   21 9a 57 b7 12 d3 ef 00  bb a9 57 b7 12 d3 ef 00  |!.W.......W.....|[0m
+[0;32mI (7865) RX_TASK: 0x3ffc8d0c   53 b9 57 b7 12 d3 ef 00  ec c8 57 b7 12 d3 ef 00  |S.W.......W.....|[0m
+[0;32mI (7865) RX_TASK: 0x3ffc8d1c   86 d8 57 b7 12 d3 ef 00  1f e8 57 b7 12 d3 ef 00  |..W.......W.....|[0m
+[0;32mI (7875) RX_TASK: 0x3ffc8d2c   b8 f7 57 b7 12 d3 ef 00  50 07 58 b7 12 d3 ef 00  |..W.....P.X.....|[0m
+[0;32mI (7885) RX_TASK: 0x3ffc8d3c   ea 16 58 b7 12 d3 ef 00  82 26 58 b7 12 d3 ef 00  |..X......&X.....|[0m
+[0;32mI (7895) RX_TASK: 0x3ffc8d4c   1c 36 58 b7 12 d3 ef 00  b5 45 58 b7 12 d3 ef 00  |.6X......EX.....|[0m
+[0;32mI (7905) RX_TASK: 0x3ffc8d5c   4e 55 58 b7 12 d3 ef 00  e7 64 58 b7 12 d3 ef 00  |NUX......dX.....|[0m
+[0;32mI (7915) RX_TASK: 0x3ffc8d6c   80 74 58 b7 12 d3 ef 00  19 84 58 b7 12 d3 ef 00  |.tX.......X.....|[0m
+[0;32mI (7925) RX_TASK: 0x3ffc8d7c   b2 93 58 b7 12 d3 ef 00  0d a2 58 b7 12 d3 ef 00  |..X.......X.....|[0m
+[0;32mI (7935) RX_TASK: 0x3ffc8d8c   6f b1 58 b7 12 d3 ef 00  7a c3 58 b7 12 d3 ef 00  |o.X.....z.X.....|[0m
+[0;32mI (7935) RX_TASK: 0x3ffc8d9c   45 d2 58 b7 12 d3 ef 00  a7 e1 58 b7 12 d3 ef 00  |E.X.......X.....|[0m
+[0;32mI (7945) RX_TASK: 0x3ffc8dac   40 f1 58 b7 12 d3 ef 00  d9 00 59 b7 12 d3 ef 00  |@.X.......Y.....|[0m
+[0;32mI (7955) RX_TASK: 0x3ffc8dbc   72 10 59 b7 12 d3 ef 00  0b 20 59 b7 12 d3 ef 00  |r.Y...... Y.....|[0m
+[0;32mI (7965) RX_TASK: 0x3ffc8dcc   a4 2f 59 b7 12 d3 ef 00  3d 3f 59 b7 12 d3 ef 00  |./Y.....=?Y.....|[0m
+[0;32mI (7975) RX_TASK: 0x3ffc8ddc   d6 4e 59 b7 12 d3 ef 00  6f 5e 59 b7 12 d3 ef 00  |.NY.....o^Y.....|[0m
+[0;32mI (7985) RX_TASK: 0x3ffc8dec   08 6e 59 b7 12 d3 ef 00  a1 7d 59 b7 12 d3 ef 00  |.nY......}Y.....|[0m
+[0;32mI (7995) RX_TASK: 0x3ffc8dfc   3a 8d 59 b7 12 d3 ef 00  d3 9c 59 b7 12 d3 ef 00  |:.Y.......Y.....|[0m
+[0;32mI (8005) RX_TASK: 0x3ffc8e0c   6c ac 59 b7 12 d3 ef 00  05 bc 59 b7 12 d3 ef 00  |l.Y.......Y.....|[0m
+[0;32mI (8015) RX_TASK: 0x3ffc8e1c   9e cb 59 b7 12 d3 ef 00  37 db 59 b7 12 d3 ef 00  |..Y.....7.Y.....|[0m
+[0;32mI (8015) RX_TASK: 0x3ffc8e2c   d0 ea 59 b7 12 d3 ef 00  69 fa 59 b7 12 d3 ef 00  |..Y.....i.Y.....|[0m
+[0;32mI (8025) RX_TASK: 0x3ffc8e3c   02 0a 5a b7 12 d3 ef 00  9b 19 5a b7 12 d3 ef 00  |..Z.......Z.....|[0m
+[0;32mI (8035) RX_TASK: 0x3ffc8e4c   34 29 5a b7 12 d3 ef 00  cd 38 5a b7 12 d3 ef 00  |4)Z......8Z.....|[0m
+[0;32mI (8045) RX_TASK: 0x3ffc8e5c   66 48 5a b7 12 d3 ef 00  ff 57 5a b7 12 d3 ef 00  |fHZ......WZ.....|[0m
+[0;32mI (8055) RX_TASK: 0x3ffc8e6c   98 67 5a b7 12 d3 ef 00  31 77 5a b7 12 d3 ef 00  |.gZ.....1wZ.....|[0m
+[0;32mI (8065) RX_TASK: 0x3ffc8e7c   ca 86 5a b7 12 d3 ef 00  63 96 5a b7 12 d3 ef 00  |..Z.....c.Z.....|[0m
+[0;32mI (8075) RX_TASK: 0x3ffc8e8c   fc a5 5a b7 12 d3 ef 00  95 b5 5a b7 12 d3 ef 00  |..Z.......Z.....|[0m
+[0;32mI (8085) RX_TASK: 0x3ffc8e9c   2e c5 5a b7 12 d3 ef 00  c7 d4 5a b7 12 d3 ef 00  |..Z.......Z.....|[0m
+[0;32mI (8085) RX_TASK: Read 1024 bytes: timestamped: '67504596772906080', calculated delay: '557443'[0m
+[0;32mI (8095) RX_TASK: 0x3ffc8aac   60 e4 5a b7 12 d3 ef 00  f9 f3 5a b7 12 d3 ef 00  |`.Z.......Z.....|[0m
+[0;32mI (8105) RX_TASK: 0x3ffc8abc   92 03 5b b7 12 d3 ef 00  2b 13 5b b7 12 d3 ef 00  |..[.....+.[.....|[0m
+[0;32mI (8115) RX_TASK: 0x3ffc8acc   c4 22 5b b7 12 d3 ef 00  5d 32 5b b7 12 d3 ef 00  |."[.....]2[.....|[0m
+[0;32mI (8125) RX_TASK: 0x3ffc8adc   f6 41 5b b7 12 d3 ef 00  90 51 5b b7 12 d3 ef 00  |.A[......Q[.....|[0m
+[0;32mI (8135) RX_TASK: 0x3ffc8aec   28 61 5b b7 12 d3 ef 00  c1 70 5b b7 12 d3 ef 00  |(a[......p[.....|[0m
+[0;32mI (8145) RX_TASK: 0x3ffc8afc   5a 80 5b b7 12 d3 ef 00  f4 8f 5b b7 12 d3 ef 00  |Z.[.......[.....|[0m
+[0;32mI (8145) RX_TASK: 0x3ffc8b0c   8c 9f 5b b7 12 d3 ef 00  26 af 5b b7 12 d3 ef 00  |..[.....&.[.....|[0m
+[0;32mI (8155) RX_TASK: 0x3ffc8b1c   5f c0 5b b7 12 d3 ef 00  ea cc 5b b7 12 d3 ef 00  |_.[.......[.....|[0m
+[0;32mI (8165) RX_TASK: 0x3ffc8b2c   d7 dc 5b b7 12 d3 ef 00  34 ec 5b b7 12 d3 ef 00  |..[.....4.[.....|[0m
+[0;32mI (8175) RX_TASK: 0x3ffc8b3c   b1 fb 5b b7 12 d3 ef 00  4a 0b 5c b7 12 d3 ef 00  |..[.....J.\.....|[0m
+[0;32mI (8185) RX_TASK: 0x3ffc8b4c   f1 1a 5c b7 12 d3 ef 00  e3 2c 5c b7 12 d3 ef 00  |..\......,\.....|[0m
+[0;32mI (8195) RX_TASK: 0x3ffc8b5c   7f 3b 5c b7 12 d3 ef 00  18 4b 5c b7 12 d3 ef 00  |.;\......K\.....|[0m
+[0;32mI (8205) RX_TASK: 0x3ffc8b6c   ad 5a 5c b7 12 d3 ef 00  4a 6a 5c b7 12 d3 ef 00  |.Z\.....Jj\.....|[0m
+[0;32mI (8215) RX_TASK: 0x3ffc8b7c   df 79 5c b7 12 d3 ef 00  7c 89 5c b7 12 d3 ef 00  |.y\.....|.\.....|[0m
+[0;32mI (8225) RX_TASK: 0x3ffc8b8c   11 99 5c b7 12 d3 ef 00  ae a8 5c b7 12 d3 ef 00  |..\.......\.....|[0m
+[0;32mI (8225) RX_TASK: 0x3ffc8b9c   43 b8 5c b7 12 d3 ef 00  e0 c7 5c b7 12 d3 ef 00  |C.\.......\.....|[0m
+[0;32mI (8235) RX_TASK: 0x3ffc8bac   75 d7 5c b7 12 d3 ef 00  12 e7 5c b7 12 d3 ef 00  |u.\.......\.....|[0m
+[0;32mI (8245) RX_TASK: 0x3ffc8bbc   a7 f6 5c b7 12 d3 ef 00  44 06 5d b7 12 d3 ef 00  |..\.....D.].....|[0m
+[0;32mI (8255) RX_TASK: 0x3ffc8bcc   da 15 5d b7 12 d3 ef 00  76 25 5d b7 12 d3 ef 00  |..].....v%].....|[0m
+[0;32mI (8265) RX_TASK: 0x3ffc8bdc   0b 35 5d b7 12 d3 ef 00  a8 44 5d b7 12 d3 ef 00  |.5]......D].....|[0m
+[0;32mI (8275) RX_TASK: 0x3ffc8bec   3d 54 5d b7 12 d3 ef 00  dc 63 5d b7 12 d3 ef 00  |=T]......c].....|[0m
+[0;32mI (8285) RX_TASK: 0x3ffc8bfc   6f 73 5d b7 12 d3 ef 00  0c 83 5d b7 12 d3 ef 00  |os].......].....|[0m
+[0;32mI (8295) RX_TASK: 0x3ffc8c0c   a1 92 5d b7 12 d3 ef 00  3e a2 5d b7 12 d3 ef 00  |..].....>.].....|[0m
+[0;32mI (8295) RX_TASK: 0x3ffc8c1c   d9 b1 5d b7 12 d3 ef 00  70 c1 5d b7 12 d3 ef 00  |..].....p.].....|[0m
+[0;32mI (8305) RX_TASK: 0x3ffc8c2c   05 d1 5d b7 12 d3 ef 00  a2 e0 5d b7 12 d3 ef 00  |..].......].....|[0m
+[0;32mI (8315) RX_TASK: 0x3ffc8c3c   37 f0 5d b7 12 d3 ef 00  e3 ff 5d b7 12 d3 ef 00  |7.].......].....|[0m
+[0;32mI (8325) RX_TASK: 0x3ffc8c4c   f6 0e 5e b7 12 d3 ef 00  8e 1e 5e b7 12 d3 ef 00  |..^.......^.....|[0m
+[0;32mI (8335) RX_TASK: 0x3ffc8c5c   24 2e 5e b7 12 d3 ef 00  b9 3d 5e b7 12 d3 ef 00  |$.^......=^.....|[0m
+[0;32mI (8345) RX_TASK: 0x3ffc8c6c   4f 4d 5e b7 12 d3 ef 00  f2 5c 5e b7 12 d3 ef 00  |OM^......\^.....|[0m
+[0;32mI (8355) RX_TASK: 0x3ffc8c7c   88 6c 5e b7 12 d3 ef 00  25 7c 5e b7 12 d3 ef 00  |.l^.....%|^.....|[0m
+[0;32mI (8365) RX_TASK: 0x3ffc8c8c   b2 8b 5e b7 12 d3 ef 00  50 9b 5e b7 12 d3 ef 00  |..^.....P.^.....|[0m
+[0;32mI (8365) RX_TASK: 0x3ffc8c9c   ec aa 5e b7 12 d3 ef 00  89 ba 5e b7 12 d3 ef 00  |..^.......^.....|[0m
+[0;32mI (8375) RX_TASK: 0x3ffc8cac   1e ca 5e b7 12 d3 ef 00  b3 d9 5e b7 12 d3 ef 00  |..^.......^.....|[0m
+[0;32mI (8385) RX_TASK: 0x3ffc8cbc   74 e8 5e b7 12 d3 ef 00  c2 fa 5e b7 12 d3 ef 00  |t.^.......^.....|[0m
+[0;32mI (8395) RX_TASK: 0x3ffc8ccc   91 08 5f b7 12 d3 ef 00  17 18 5f b7 12 d3 ef 00  |.._......._.....|[0m
+[0;32mI (8405) RX_TASK: 0x3ffc8cdc   b0 27 5f b7 12 d3 ef 00  4a 37 5f b7 12 d3 ef 00  |.'_.....J7_.....|[0m
+[0;32mI (8415) RX_TASK: 0x3ffc8cec   ee 46 5f b7 12 d3 ef 00  83 56 5f b7 12 d3 ef 00  |.F_......V_.....|[0m
+[0;32mI (8425) RX_TASK: 0x3ffc8cfc   1c 66 5f b7 12 d3 ef 00  ad 75 5f b7 12 d3 ef 00  |.f_......u_.....|[0m
+[0;32mI (8435) RX_TASK: 0x3ffc8d0c   47 85 5f b7 12 d3 ef 00  e7 94 5f b7 12 d3 ef 00  |G._......._.....|[0m
+[0;32mI (8445) RX_TASK: 0x3ffc8d1c   80 a4 5f b7 12 d3 ef 00  19 b4 5f b7 12 d3 ef 00  |.._......._.....|[0m
+[0;32mI (8445) RX_TASK: 0x3ffc8d2c   aa c3 5f b7 12 d3 ef 00  43 d3 5f b7 12 d3 ef 00  |.._.....C._.....|[0m
+[0;32mI (8455) RX_TASK: 0x3ffc8d3c   e4 e2 5f b7 12 d3 ef 00  7d f2 5f b7 12 d3 ef 00  |.._.....}._.....|[0m
+[0;32mI (8465) RX_TASK: 0x3ffc8d4c   16 02 60 b7 12 d3 ef 00  a7 11 60 b7 12 d3 ef 00  |..`.......`.....|[0m
+[0;32mI (8475) RX_TASK: 0x3ffc8d5c   40 21 60 b7 12 d3 ef 00  e1 30 60 b7 12 d3 ef 00  |@!`......0`.....|[0m
+[0;32mI (8485) RX_TASK: 0x3ffc8d6c   7a 40 60 b7 12 d3 ef 00  13 50 60 b7 12 d3 ef 00  |z@`......P`.....|[0m
+[0;32mI (8495) RX_TASK: 0x3ffc8d7c   a4 5f 60 b7 12 d3 ef 00  3d 6f 60 b7 12 d3 ef 00  |._`.....=o`.....|[0m
+[0;32mI (8505) RX_TASK: 0x3ffc8d8c   d6 7e 60 b7 12 d3 ef 00  6f 8e 60 b7 12 d3 ef 00  |.~`.....o.`.....|[0m
+[0;32mI (8505) RX_TASK: 0x3ffc8d9c   08 9e 60 b7 12 d3 ef 00  a1 ad 60 b7 12 d3 ef 00  |..`.......`.....|[0m
+[0;32mI (8515) RX_TASK: 0x3ffc8dac   3a bd 60 b7 12 d3 ef 00  d3 cc 60 b7 12 d3 ef 00  |:.`.......`.....|[0m
+[0;32mI (8525) RX_TASK: 0x3ffc8dbc   6c dc 60 b7 12 d3 ef 00  05 ec 60 b7 12 d3 ef 00  |l.`.......`.....|[0m
+[0;32mI (8535) RX_TASK: 0x3ffc8dcc   9e fb 60 b7 12 d3 ef 00  37 0b 61 b7 12 d3 ef 00  |..`.....7.a.....|[0m
+[0;32mI (8545) RX_TASK: 0x3ffc8ddc   d0 1a 61 b7 12 d3 ef 00  69 2a 61 b7 12 d3 ef 00  |..a.....i*a.....|[0m
+[0;32mI (8555) RX_TASK: 0x3ffc8dec   02 3a 61 b7 12 d3 ef 00  9b 49 61 b7 12 d3 ef 00  |.:a......Ia.....|[0m
+[0;32mI (8565) RX_TASK: 0x3ffc8dfc   34 59 61 b7 12 d3 ef 00  cd 68 61 b7 12 d3 ef 00  |4Ya......ha.....|[0m
+[0;32mI (8575) RX_TASK: 0x3ffc8e0c   66 78 61 b7 12 d3 ef 00  ff 87 61 b7 12 d3 ef 00  |fxa.......a.....|[0m
+[0;32mI (8575) RX_TASK: 0x3ffc8e1c   98 97 61 b7 12 d3 ef 00  32 a7 61 b7 12 d3 ef 00  |..a.....2.a.....|[0m
+[0;32mI (8585) RX_TASK: 0x3ffc8e2c   ca b6 61 b7 12 d3 ef 00  64 c6 61 b7 12 d3 ef 00  |..a.....d.a.....|[0m
+[0;32mI (8595) RX_TASK: 0x3ffc8e3c   fd d5 61 b7 12 d3 ef 00  95 e5 61 b7 12 d3 ef 00  |..a.......a.....|[0m
+[0;32mI (8605) RX_TASK: 0x3ffc8e4c   2f f5 61 b7 12 d3 ef 00  e8 03 62 b7 12 d3 ef 00  |/.a.......b.....|[0m
+[0;32mI (8615) RX_TASK: 0x3ffc8e5c   75 13 62 b7 12 d3 ef 00  fb 24 62 b7 12 d3 ef 00  |u.b......$b.....|[0m
+[0;32mI (8625) RX_TASK: 0x3ffc8e6c   a2 33 62 b7 12 d3 ef 00  27 43 62 b7 12 d3 ef 00  |.3b.....'Cb.....|[0m
+[0;32mI (8635) RX_TASK: 0x3ffc8e7c   c1 52 62 b7 12 d3 ef 00  5a 62 62 b7 12 d3 ef 00  |.Rb.....Zbb.....|[0m
+[0;32mI (8645) RX_TASK: 0x3ffc8e8c   f3 71 62 b7 12 d3 ef 00  8c 81 62 b7 12 d3 ef 00  |.qb.......b.....|[0m
+[0;32mI (8645) RX_TASK: 0x3ffc8e9c   24 91 62 b7 12 d3 ef 00  be a0 62 b7 12 d3 ef 00  |$.b.......b.....|[0m
+[0;32mI (8655) RX_TASK: Read 1024 bytes: timestamped: '67504596773417047', calculated delay: '615935'[0m
+[0;32mI (8665) RX_TASK: 0x3ffc8aac   57 b0 62 b7 12 d3 ef 00  f0 bf 62 b7 12 d3 ef 00  |W.b.......b.....|[0m
+[0;32mI (8675) RX_TASK: 0x3ffc8abc   89 cf 62 b7 12 d3 ef 00  22 df 62 b7 12 d3 ef 00  |..b.....".b.....|[0m
+[0;32mI (8685) RX_TASK: 0x3ffc8acc   bb ee 62 b7 12 d3 ef 00  54 fe 62 b7 12 d3 ef 00  |..b.....T.b.....|[0m
+[0;32mI (8695) RX_TASK: 0x3ffc8adc   ed 0d 63 b7 12 d3 ef 00  86 1d 63 b7 12 d3 ef 00  |..c.......c.....|[0m
+[0;32mI (8705) RX_TASK: 0x3ffc8aec   1f 2d 63 b7 12 d3 ef 00  b8 3c 63 b7 12 d3 ef 00  |.-c......<c.....|[0m
+[0;32mI (8715) RX_TASK: 0x3ffc8afc   51 4c 63 b7 12 d3 ef 00  ea 5b 63 b7 12 d3 ef 00  |QLc......[c.....|[0m
+[0;32mI (8715) RX_TASK: 0x3ffc8b0c   83 6b 63 b7 12 d3 ef 00  1c 7b 63 b7 12 d3 ef 00  |.kc......{c.....|[0m
+[0;32mI (8725) RX_TASK: 0x3ffc8b1c   b5 8a 63 b7 12 d3 ef 00  4e 9a 63 b7 12 d3 ef 00  |..c.....N.c.....|[0m
+[0;32mI (8735) RX_TASK: 0x3ffc8b2c   e7 a9 63 b7 12 d3 ef 00  80 b9 63 b7 12 d3 ef 00  |..c.......c.....|[0m
+[0;32mI (8745) RX_TASK: 0x3ffc8b3c   1a c9 63 b7 12 d3 ef 00  b2 d8 63 b7 12 d3 ef 00  |..c.......c.....|[0m
+[0;32mI (8755) RX_TASK: 0x3ffc8b4c   4b e8 63 b7 12 d3 ef 00  e4 f7 63 b7 12 d3 ef 00  |K.c.......c.....|[0m
+[0;32mI (8765) RX_TASK: 0x3ffc8b5c   7d 07 64 b7 12 d3 ef 00  1a 17 64 b7 12 d3 ef 00  |}.d.......d.....|[0m
+[0;32mI (8775) RX_TASK: 0x3ffc8b6c   af 26 64 b7 12 d3 ef 00  48 36 64 b7 12 d3 ef 00  |.&d.....H6d.....|[0m
+[0;32mI (8785) RX_TASK: 0x3ffc8b7c   e1 45 64 b7 12 d3 ef 00  7a 55 64 b7 12 d3 ef 00  |.Ed.....zUd.....|[0m
+[0;32mI (8785) RX_TASK: 0x3ffc8b8c   1b 65 64 b7 12 d3 ef 00  ac 74 64 b7 12 d3 ef 00  |.ed......td.....|[0m
+[0;32mI (8795) RX_TASK: 0x3ffc8b9c   45 84 64 b7 12 d3 ef 00  31 94 64 b7 12 d3 ef 00  |E.d.....1.d.....|[0m
+[0;32mI (8805) RX_TASK: 0x3ffc8bac   86 a3 64 b7 12 d3 ef 00  17 b3 64 b7 12 d3 ef 00  |..d.......d.....|[0m
+[0;32mI (8815) RX_TASK: 0x3ffc8bbc   a9 c2 64 b7 12 d3 ef 00  42 d2 64 b7 12 d3 ef 00  |..d.....B.d.....|[0m
+[0;32mI (8825) RX_TASK: 0x3ffc8bcc   db e1 64 b7 12 d3 ef 00  74 f1 64 b7 12 d3 ef 00  |..d.....t.d.....|[0m
+[0;32mI (8835) RX_TASK: 0x3ffc8bdc   16 01 65 b7 12 d3 ef 00  a7 10 65 b7 12 d3 ef 00  |..e.......e.....|[0m
+[0;32mI (8845) RX_TASK: 0x3ffc8bec   db 1f 65 b7 12 d3 ef 00  ed 2e 65 b7 12 d3 ef 00  |..e.......e.....|[0m
+[0;32mI (8855) RX_TASK: 0x3ffc8bfc   76 40 65 b7 12 d3 ef 00  22 4f 65 b7 12 d3 ef 00  |v@e....."Oe.....|[0m
+[0;32mI (8855) RX_TASK: 0x3ffc8c0c   9f 5e 65 b7 12 d3 ef 00  38 6e 65 b7 12 d3 ef 00  |.^e.....8ne.....|[0m
+[0;32mI (8865) RX_TASK: 0x3ffc8c1c   d1 7d 65 b7 12 d3 ef 00  6a 8d 65 b7 12 d3 ef 00  |.}e.....j.e.....|[0m
+[0;32mI (8875) RX_TASK: 0x3ffc8c2c   0c 9d 65 b7 12 d3 ef 00  9c ac 65 b7 12 d3 ef 00  |..e.......e.....|[0m
+[0;32mI (8885) RX_TASK: 0x3ffc8c3c   36 bc 65 b7 12 d3 ef 00  cf cb 65 b7 12 d3 ef 00  |6.e.......e.....|[0m
+[0;32mI (8895) RX_TASK: 0x3ffc8c4c   67 db 65 b7 12 d3 ef 00  09 eb 65 b7 12 d3 ef 00  |g.e.......e.....|[0m
+[0;32mI (8905) RX_TASK: 0x3ffc8c5c   9a fa 65 b7 12 d3 ef 00  32 0a 66 b7 12 d3 ef 00  |..e.....2.f.....|[0m
+[0;32mI (8915) RX_TASK: 0x3ffc8c6c   cc 19 66 b7 12 d3 ef 00  64 29 66 b7 12 d3 ef 00  |..f.....d)f.....|[0m
+[0;32mI (8925) RX_TASK: 0x3ffc8c7c   06 39 66 b7 12 d3 ef 00  97 48 66 b7 12 d3 ef 00  |.9f......Hf.....|[0m
+[0;32mI (8925) RX_TASK: 0x3ffc8c8c   30 58 66 b7 12 d3 ef 00  c9 67 66 b7 12 d3 ef 00  |0Xf......gf.....|[0m
+[0;32mI (8935) RX_TASK: 0x3ffc8c9c   62 77 66 b7 12 d3 ef 00  02 87 66 b7 12 d3 ef 00  |bwf.......f.....|[0m
+[0;32mI (8945) RX_TASK: 0x3ffc8cac   94 96 66 b7 12 d3 ef 00  2d a6 66 b7 12 d3 ef 00  |..f.....-.f.....|[0m
+[0;32mI (8955) RX_TASK: 0x3ffc8cbc   c6 b5 66 b7 12 d3 ef 00  5f c5 66 b7 12 d3 ef 00  |..f....._.f.....|[0m
+[0;32mI (8965) RX_TASK: 0x3ffc8ccc   f8 d4 66 b7 12 d3 ef 00  91 e4 66 b7 12 d3 ef 00  |..f.......f.....|[0m
+[0;32mI (8975) RX_TASK: 0x3ffc8cdc   2a f4 66 b7 12 d3 ef 00  c3 03 67 b7 12 d3 ef 00  |*.f.......g.....|[0m
+[0;32mI (8985) RX_TASK: 0x3ffc8cec   5c 13 67 b7 12 d3 ef 00  f5 22 67 b7 12 d3 ef 00  |\.g......"g.....|[0m
+[0;32mI (8995) RX_TASK: 0x3ffc8cfc   8e 32 67 b7 12 d3 ef 00  27 42 67 b7 12 d3 ef 00  |.2g.....'Bg.....|[0m
+[0;32mI (8995) RX_TASK: 0x3ffc8d0c   c0 51 67 b7 12 d3 ef 00  59 61 67 b7 12 d3 ef 00  |.Qg.....Yag.....|[0m
+[0;32mI (9005) RX_TASK: 0x3ffc8d1c   f2 70 67 b7 12 d3 ef 00  8b 80 67 b7 12 d3 ef 00  |.pg.......g.....|[0m
+[0;32mI (9015) RX_TASK: 0x3ffc8d2c   24 90 67 b7 12 d3 ef 00  bd 9f 67 b7 12 d3 ef 00  |$.g.......g.....|[0m
+[0;32mI (9025) RX_TASK: 0x3ffc8d3c   56 af 67 b7 12 d3 ef 00  ef be 67 b7 12 d3 ef 00  |V.g.......g.....|[0m
+[0;32mI (9035) RX_TASK: 0x3ffc8d4c   88 ce 67 b7 12 d3 ef 00  21 de 67 b7 12 d3 ef 00  |..g.....!.g.....|[0m
+[0;32mI (9045) RX_TASK: 0x3ffc8d5c   ba ed 67 b7 12 d3 ef 00  53 fd 67 b7 12 d3 ef 00  |..g.....S.g.....|[0m
+[0;32mI (9055) RX_TASK: 0x3ffc8d6c   ec 0c 68 b7 12 d3 ef 00  85 1c 68 b7 12 d3 ef 00  |..h.......h.....|[0m
+[0;32mI (9065) RX_TASK: 0x3ffc8d7c   1e 2c 68 b7 12 d3 ef 00  b7 3b 68 b7 12 d3 ef 00  |.,h......;h.....|[0m
+[0;32mI (9075) RX_TASK: 0x3ffc8d8c   70 4a 68 b7 12 d3 ef 00  fd 59 68 b7 12 d3 ef 00  |pJh......Yh.....|[0m
+[0;32mI (9075) RX_TASK: 0x3ffc8d9c   96 69 68 b7 12 d3 ef 00  2f 79 68 b7 12 d3 ef 00  |.ih...../yh.....|[0m
+[0;32mI (9085) RX_TASK: 0x3ffc8dac   c9 88 68 b7 12 d3 ef 00  61 98 68 b7 12 d3 ef 00  |..h.....a.h.....|[0m
+[0;32mI (9095) RX_TASK: 0x3ffc8dbc   fb a7 68 b7 12 d3 ef 00  94 b7 68 b7 12 d3 ef 00  |..h.......h.....|[0m
+[0;32mI (9105) RX_TASK: 0x3ffc8dcc   10 c9 68 b7 12 d3 ef 00  bb d7 68 b7 12 d3 ef 00  |..h.......h.....|[0m
+[0;32mI (9115) RX_TASK: 0x3ffc8ddc   41 e7 68 b7 12 d3 ef 00  da f6 68 b7 12 d3 ef 00  |A.h.......h.....|[0m
+[0;32mI (9125) RX_TASK: 0x3ffc8dec   73 06 69 b7 12 d3 ef 00  0c 16 69 b7 12 d3 ef 00  |s.i.......i.....|[0m
+[0;32mI (9135) RX_TASK: 0x3ffc8dfc   a5 25 69 b7 12 d3 ef 00  3e 35 69 b7 12 d3 ef 00  |.%i.....>5i.....|[0m
+[0;32mI (9145) RX_TASK: 0x3ffc8e0c   d7 44 69 b7 12 d3 ef 00  70 54 69 b7 12 d3 ef 00  |.Di.....pTi.....|[0m
+[0;32mI (9145) RX_TASK: 0x3ffc8e1c   09 64 69 b7 12 d3 ef 00  a2 73 69 b7 12 d3 ef 00  |.di......si.....|[0m
+[0;32mI (9155) RX_TASK: 0x3ffc8e2c   3c 83 69 b7 12 d3 ef 00  d5 92 69 b7 12 d3 ef 00  |<.i.......i.....|[0m
+[0;32mI (9165) RX_TASK: 0x3ffc8e3c   6d a2 69 b7 12 d3 ef 00  06 b2 69 b7 12 d3 ef 00  |m.i.......i.....|[0m
+[0;32mI (9175) RX_TASK: 0x3ffc8e4c   9f c1 69 b7 12 d3 ef 00  39 d1 69 b7 12 d3 ef 00  |..i.....9.i.....|[0m
+[0;32mI (9185) RX_TASK: 0x3ffc8e5c   d1 e0 69 b7 12 d3 ef 00  6b f0 69 b7 12 d3 ef 00  |..i.....k.i.....|[0m
+[0;32mI (9195) RX_TASK: 0x3ffc8e6c   04 00 6a b7 12 d3 ef 00  9d 0f 6a b7 12 d3 ef 00  |..j.......j.....|[0m
+[0;32mI (9205) RX_TASK: 0x3ffc8e7c   35 1f 6a b7 12 d3 ef 00  cf 2e 6a b7 12 d3 ef 00  |5.j.......j.....|[0m
+[0;32mI (9215) RX_TASK: 0x3ffc8e8c   68 3e 6a b7 12 d3 ef 00  01 4e 6a b7 12 d3 ef 00  |h>j......Nj.....|[0m
+[0;32mI (9215) RX_TASK: 0x3ffc8e9c   9a 5d 6a b7 12 d3 ef 00  33 6d 6a b7 12 d3 ef 00  |.]j.....3mj.....|[0m
+[0;32mI (9225) RX_TASK: Read 1024 bytes: timestamped: '67504596773928140', calculated delay: '673717'[0m
+[0;32mI (9235) RX_TASK: 0x3ffc8aac   cc 7c 6a b7 12 d3 ef 00  65 8c 6a b7 12 d3 ef 00  |.|j.....e.j.....|[0m
+[0;32mI (9245) RX_TASK: 0x3ffc8abc   fe 9b 6a b7 12 d3 ef 00  97 ab 6a b7 12 d3 ef 00  |..j.......j.....|[0m
+[0;32mI (9255) RX_TASK: 0x3ffc8acc   30 bb 6a b7 12 d3 ef 00  c9 ca 6a b7 12 d3 ef 00  |0.j.......j.....|[0m
+[0;32mI (9265) RX_TASK: 0x3ffc8adc   62 da 6a b7 12 d3 ef 00  fb e9 6a b7 12 d3 ef 00  |b.j.......j.....|[0m
+[0;32mI (9275) RX_TASK: 0x3ffc8aec   94 f9 6a b7 12 d3 ef 00  2d 09 6b b7 12 d3 ef 00  |..j.....-.k.....|[0m
+[0;32mI (9285) RX_TASK: 0x3ffc8afc   c6 18 6b b7 12 d3 ef 00  5f 28 6b b7 12 d3 ef 00  |..k....._(k.....|[0m
+[0;32mI (9285) RX_TASK: 0x3ffc8b0c   f8 37 6b b7 12 d3 ef 00  91 47 6b b7 12 d3 ef 00  |.7k......Gk.....|[0m
+[0;32mI (9295) RX_TASK: 0x3ffc8b1c   2a 57 6b b7 12 d3 ef 00  e3 65 6b b7 12 d3 ef 00  |*Wk......ek.....|[0m
+[0;32mI (9305) RX_TASK: 0x3ffc8b2c   80 79 6b b7 12 d3 ef 00  09 86 6b b7 12 d3 ef 00  |.yk.......k.....|[0m
+[0;32mI (9315) RX_TASK: 0x3ffc8b3c   8f 95 6b b7 12 d3 ef 00  28 a5 6b b7 12 d3 ef 00  |..k.....(.k.....|[0m
+[0;32mI (9325) RX_TASK: 0x3ffc8b4c   c1 b4 6b b7 12 d3 ef 00  5a c4 6b b7 12 d3 ef 00  |..k.....Z.k.....|[0m
+[0;32mI (9335) RX_TASK: 0x3ffc8b5c   f3 d3 6b b7 12 d3 ef 00  8c e3 6b b7 12 d3 ef 00  |..k.......k.....|[0m
+[0;32mI (9345) RX_TASK: 0x3ffc8b6c   25 f3 6b b7 12 d3 ef 00  be 02 6c b7 12 d3 ef 00  |%.k.......l.....|[0m
+[0;32mI (9355) RX_TASK: 0x3ffc8b7c   57 12 6c b7 12 d3 ef 00  f0 21 6c b7 12 d3 ef 00  |W.l......!l.....|[0m
+[0;32mI (9355) RX_TASK: 0x3ffc8b8c   89 31 6c b7 12 d3 ef 00  22 41 6c b7 12 d3 ef 00  |.1l....."Al.....|[0m
+[0;32mI (9365) RX_TASK: 0x3ffc8b9c   bb 50 6c b7 12 d3 ef 00  54 60 6c b7 12 d3 ef 00  |.Pl.....T`l.....|[0m
+[0;32mI (9375) RX_TASK: 0x3ffc8bac   ed 6f 6c b7 12 d3 ef 00  86 7f 6c b7 12 d3 ef 00  |.ol.......l.....|[0m
+[0;32mI (9385) RX_TASK: 0x3ffc8bbc   1f 8f 6c b7 12 d3 ef 00  b8 9e 6c b7 12 d3 ef 00  |..l.......l.....|[0m
+[0;32mI (9395) RX_TASK: 0x3ffc8bcc   51 ae 6c b7 12 d3 ef 00  ea bd 6c b7 12 d3 ef 00  |Q.l.......l.....|[0m
+[0;32mI (9405) RX_TASK: 0x3ffc8bdc   83 cd 6c b7 12 d3 ef 00  1c dd 6c b7 12 d3 ef 00  |..l.......l.....|[0m
+[0;32mI (9415) RX_TASK: 0x3ffc8bec   b5 ec 6c b7 12 d3 ef 00  4e fc 6c b7 12 d3 ef 00  |..l.....N.l.....|[0m
+[0;32mI (9425) RX_TASK: 0x3ffc8bfc   e7 0b 6d b7 12 d3 ef 00  80 1b 6d b7 12 d3 ef 00  |..m.......m.....|[0m
+[0;32mI (9425) RX_TASK: 0x3ffc8c0c   19 2b 6d b7 12 d3 ef 00  b3 3a 6d b7 12 d3 ef 00  |.+m......:m.....|[0m
+[0;32mI (9435) RX_TASK: 0x3ffc8c1c   4b 4a 6d b7 12 d3 ef 00  e4 59 6d b7 12 d3 ef 00  |KJm......Ym.....|[0m
+[0;32mI (9445) RX_TASK: 0x3ffc8c2c   7d 69 6d b7 12 d3 ef 00  16 79 6d b7 12 d3 ef 00  |}im......ym.....|[0m
+[0;32mI (9455) RX_TASK: 0x3ffc8c3c   af 88 6d b7 12 d3 ef 00  48 98 6d b7 12 d3 ef 00  |..m.....H.m.....|[0m
+[0;32mI (9465) RX_TASK: 0x3ffc8c4c   e1 a7 6d b7 12 d3 ef 00  7a b7 6d b7 12 d3 ef 00  |..m.....z.m.....|[0m
+[0;32mI (9475) RX_TASK: 0x3ffc8c5c   13 c7 6d b7 12 d3 ef 00  ad d6 6d b7 12 d3 ef 00  |..m.......m.....|[0m
+[0;32mI (9485) RX_TASK: 0x3ffc8c6c   46 e6 6d b7 12 d3 ef 00  de f5 6d b7 12 d3 ef 00  |F.m.......m.....|[0m
+[0;32mI (9495) RX_TASK: 0x3ffc8c7c   78 05 6e b7 12 d3 ef 00  11 15 6e b7 12 d3 ef 00  |x.n.......n.....|[0m
+[0;32mI (9495) RX_TASK: 0x3ffc8c8c   aa 24 6e b7 12 d3 ef 00  43 34 6e b7 12 d3 ef 00  |.$n.....C4n.....|[0m
+[0;32mI (9505) RX_TASK: 0x3ffc8c9c   dc 43 6e b7 12 d3 ef 00  75 53 6e b7 12 d3 ef 00  |.Cn.....uSn.....|[0m
+[0;32mI (9515) RX_TASK: 0x3ffc8cac   0e 63 6e b7 12 d3 ef 00  a7 72 6e b7 12 d3 ef 00  |.cn......rn.....|[0m
+[0;32mI (9525) RX_TASK: 0x3ffc8cbc   60 81 6e b7 12 d3 ef 00  ed 90 6e b7 12 d3 ef 00  |`.n.......n.....|[0m
+[0;32mI (9535) RX_TASK: 0x3ffc8ccc   f4 a0 6e b7 12 d3 ef 00  3d b0 6e b7 12 d3 ef 00  |..n.....=.n.....|[0m
+[0;32mI (9545) RX_TASK: 0x3ffc8cdc   b2 bf 6e b7 12 d3 ef 00  4b cf 6e b7 12 d3 ef 00  |..n.....K.n.....|[0m
+[0;32mI (9555) RX_TASK: 0x3ffc8cec   ea de 6e b7 12 d3 ef 00  e6 f0 6e b7 12 d3 ef 00  |..n.......n.....|[0m
+[0;32mI (9565) RX_TASK: 0x3ffc8cfc   7c ff 6e b7 12 d3 ef 00  19 0f 6f b7 12 d3 ef 00  ||.n.......o.....|[0m
+[0;32mI (9565) RX_TASK: 0x3ffc8d0c   aa 1e 6f b7 12 d3 ef 00  4b 2e 6f b7 12 d3 ef 00  |..o.....K.o.....|[0m
+[0;32mI (9575) RX_TASK: 0x3ffc8d1c   e5 3d 6f b7 12 d3 ef 00  06 4d 6f b7 12 d3 ef 00  |.=o......Mo.....|[0m
+[0;32mI (9585) RX_TASK: 0x3ffc8d2c   9a 5c 6f b7 12 d3 ef 00  30 6c 6f b7 12 d3 ef 00  |.\o.....0lo.....|[0m
+[0;32mI (9595) RX_TASK: 0x3ffc8d3c   c8 7b 6f b7 12 d3 ef 00  5f 8b 6f b7 12 d3 ef 00  |.{o....._.o.....|[0m
+[0;32mI (9605) RX_TASK: 0x3ffc8d4c   fe 9a 6f b7 12 d3 ef 00  94 aa 6f b7 12 d3 ef 00  |..o.......o.....|[0m
+[0;32mI (9615) RX_TASK: 0x3ffc8d5c   30 ba 6f b7 12 d3 ef 00  c2 c9 6f b7 12 d3 ef 00  |0.o.......o.....|[0m
+[0;32mI (9625) RX_TASK: 0x3ffc8d6c   5f d9 6f b7 12 d3 ef 00  f8 e8 6f b7 12 d3 ef 00  |_.o.......o.....|[0m
+[0;32mI (9635) RX_TASK: 0x3ffc8d7c   94 f8 6f b7 12 d3 ef 00  2a 08 70 b7 12 d3 ef 00  |..o.....*.p.....|[0m
+[0;32mI (9635) RX_TASK: 0x3ffc8d8c   c2 17 70 b7 12 d3 ef 00  58 27 70 b7 12 d3 ef 00  |..p.....X'p.....|[0m
+[0;32mI (9645) RX_TASK: 0x3ffc8d9c   f8 36 70 b7 12 d3 ef 00  8e 46 70 b7 12 d3 ef 00  |.6p......Fp.....|[0m
+[0;32mI (9655) RX_TASK: 0x3ffc8dac   2a 56 70 b7 12 d3 ef 00  bc 65 70 b7 12 d3 ef 00  |*Vp......ep.....|[0m
+[0;32mI (9665) RX_TASK: 0x3ffc8dbc   58 75 70 b7 12 d3 ef 00  f2 84 70 b7 12 d3 ef 00  |Xup.......p.....|[0m
+[0;32mI (9675) RX_TASK: 0x3ffc8dcc   8e 94 70 b7 12 d3 ef 00  24 a4 70 b7 12 d3 ef 00  |..p.....$.p.....|[0m
+[0;32mI (9685) RX_TASK: 0x3ffc8ddc   bc b3 70 b7 12 d3 ef 00  54 c3 70 b7 12 d3 ef 00  |..p.....T.p.....|[0m
+[0;32mI (9695) RX_TASK: 0x3ffc8dec   f2 d2 70 b7 12 d3 ef 00  88 e2 70 b7 12 d3 ef 00  |..p.......p.....|[0m
+[0;32mI (9705) RX_TASK: 0x3ffc8dfc   24 f2 70 b7 12 d3 ef 00  b6 01 71 b7 12 d3 ef 00  |$.p.......q.....|[0m
+[0;32mI (9705) RX_TASK: 0x3ffc8e0c   55 11 71 b7 12 d3 ef 00  ec 20 71 b7 12 d3 ef 00  |U.q...... q.....|[0m
+[0;32mI (9715) RX_TASK: 0x3ffc8e1c   88 30 71 b7 12 d3 ef 00  1e 40 71 b7 12 d3 ef 00  |.0q......@q.....|[0m
+[0;32mI (9725) RX_TASK: 0x3ffc8e2c   b6 4f 71 b7 12 d3 ef 00  4c 5f 71 b7 12 d3 ef 00  |.Oq.....L_q.....|[0m
+[0;32mI (9735) RX_TASK: 0x3ffc8e3c   ec 6e 71 b7 12 d3 ef 00  82 7e 71 b7 12 d3 ef 00  |.nq......~q.....|[0m
+[0;32mI (9745) RX_TASK: 0x3ffc8e4c   1f 8e 71 b7 12 d3 ef 00  b7 9d 71 b7 12 d3 ef 00  |..q.......q.....|[0m
+[0;32mI (9755) RX_TASK: 0x3ffc8e5c   74 ac 71 b7 12 d3 ef 00  1d be 71 b7 12 d3 ef 00  |t.q.......q.....|[0m
+[0;32mI (9765) RX_TASK: 0x3ffc8e6c   91 cc 71 b7 12 d3 ef 00  17 dc 71 b7 12 d3 ef 00  |..q.......q.....|[0m
+[0;32mI (9775) RX_TASK: 0x3ffc8e7c   b0 eb 71 b7 12 d3 ef 00  49 fb 71 b7 12 d3 ef 00  |..q.....I.q.....|[0m
+[0;32mI (9775) RX_TASK: 0x3ffc8e8c   e2 0a 72 b7 12 d3 ef 00  7b 1a 72 b7 12 d3 ef 00  |..r.....{.r.....|[0m
+[0;32mI (9785) RX_TASK: 0x3ffc8e9c   14 2a 72 b7 12 d3 ef 00  ad 39 72 b7 12 d3 ef 00  |.*r......9r.....|[0m
+[0;32mI (9795) RX_TASK: Read 1024 bytes: timestamped: '67504596774439238', calculated delay: '732653'[0m
+[0;32mI (9805) RX_TASK: 0x3ffc8aac   46 49 72 b7 12 d3 ef 00  df 58 72 b7 12 d3 ef 00  |FIr......Xr.....|[0m
+[0;32mI (9815) RX_TASK: 0x3ffc8abc   78 68 72 b7 12 d3 ef 00  11 78 72 b7 12 d3 ef 00  |xhr......xr.....|[0m
+[0;32mI (9825) RX_TASK: 0x3ffc8acc   aa 87 72 b7 12 d3 ef 00  43 97 72 b7 12 d3 ef 00  |..r.....C.r.....|[0m
+[0;32mI (9835) RX_TASK: 0x3ffc8adc   dc a6 72 b7 12 d3 ef 00  75 b6 72 b7 12 d3 ef 00  |..r.....u.r.....|[0m
+[0;32mI (9845) RX_TASK: 0x3ffc8aec   0e c6 72 b7 12 d3 ef 00  a7 d5 72 b7 12 d3 ef 00  |..r.......r.....|[0m
+[0;32mI (9845) RX_TASK: 0x3ffc8afc   40 e5 72 b7 12 d3 ef 00  d9 f4 72 b7 12 d3 ef 00  |@.r.......r.....|[0m
+[0;32mI (9855) RX_TASK: 0x3ffc8b0c   72 04 73 b7 12 d3 ef 00  0b 14 73 b7 12 d3 ef 00  |r.s.......s.....|[0m
+[0;32mI (9865) RX_TASK: 0x3ffc8b1c   a4 23 73 b7 12 d3 ef 00  3d 33 73 b7 12 d3 ef 00  |.#s.....=3s.....|[0m
+[0;32mI (9875) RX_TASK: 0x3ffc8b2c   d6 42 73 b7 12 d3 ef 00  6f 52 73 b7 12 d3 ef 00  |.Bs.....oRs.....|[0m
+[0;32mI (9885) RX_TASK: 0x3ffc8b3c   08 62 73 b7 12 d3 ef 00  a1 71 73 b7 12 d3 ef 00  |.bs......qs.....|[0m
+[0;32mI (9895) RX_TASK: 0x3ffc8b4c   3a 81 73 b7 12 d3 ef 00  d3 90 73 b7 12 d3 ef 00  |:.s.......s.....|[0m
+[0;32mI (9905) RX_TASK: 0x3ffc8b5c   6c a0 73 b7 12 d3 ef 00  05 b0 73 b7 12 d3 ef 00  |l.s.......s.....|[0m
+[0;32mI (9915) RX_TASK: 0x3ffc8b6c   9e bf 73 b7 12 d3 ef 00  86 cf 73 b7 12 d3 ef 00  |..s.......s.....|[0m
+[0;32mI (9915) RX_TASK: 0x3ffc8b7c   de de 73 b7 12 d3 ef 00  68 ee 73 b7 12 d3 ef 00  |..s.....h.s.....|[0m
+[0;32mI (9925) RX_TASK: 0x3ffc8b8c   01 fe 73 b7 12 d3 ef 00  9a 0d 74 b7 12 d3 ef 00  |..s.......t.....|[0m
+[0;32mI (9935) RX_TASK: 0x3ffc8b9c   33 1d 74 b7 12 d3 ef 00  cc 2c 74 b7 12 d3 ef 00  |3.t......,t.....|[0m
+[0;32mI (9945) RX_TASK: 0x3ffc8bac   65 3c 74 b7 12 d3 ef 00  fe 4b 74 b7 12 d3 ef 00  |e<t......Kt.....|[0m
+[0;32mI (9955) RX_TASK: 0x3ffc8bbc   97 5b 74 b7 12 d3 ef 00  30 6b 74 b7 12 d3 ef 00  |.[t.....0kt.....|[0m
+[0;32mI (9965) RX_TASK: 0x3ffc8bcc   c9 7a 74 b7 12 d3 ef 00  62 8a 74 b7 12 d3 ef 00  |.zt.....b.t.....|[0m
+[0;32mI (9975) RX_TASK: 0x3ffc8bdc   fb 99 74 b7 12 d3 ef 00  94 a9 74 b7 12 d3 ef 00  |..t.......t.....|[0m
+[0;32mI (9985) RX_TASK: 0x3ffc8bec   2d b9 74 b7 12 d3 ef 00  e6 c7 74 b7 12 d3 ef 00  |-.t.......t.....|[0m
+[0;32mI (9995) RX_TASK: 0x3ffc8bfc   bf d9 74 b7 12 d3 ef 00  07 e8 74 b7 12 d3 ef 00  |..t.......t.....|[0m
+[0;32mI (9995) RX_TASK: 0x3ffc8c0c   8d f7 74 b7 12 d3 ef 00  26 07 75 b7 12 d3 ef 00  |..t.....&.u.....|[0m
+[0;32mI (10005) RX_TASK: 0x3ffc8c1c   bf 16 75 b7 12 d3 ef 00  58 26 75 b7 12 d3 ef 00  |..u.....X&u.....|[0m
+[0;32mI (10015) RX_TASK: 0x3ffc8c2c   f1 35 75 b7 12 d3 ef 00  8a 45 75 b7 12 d3 ef 00  |.5u......Eu.....|[0m
+[0;32mI (10025) RX_TASK: 0x3ffc8c3c   26 55 75 b7 12 d3 ef 00  bc 64 75 b7 12 d3 ef 00  |&Uu......du.....|[0m
+[0;32mI (10035) RX_TASK: 0x3ffc8c4c   55 74 75 b7 12 d3 ef 00  ee 83 75 b7 12 d3 ef 00  |Utu.......u.....|[0m
+[0;32mI (10045) RX_TASK: 0x3ffc8c5c   87 93 75 b7 12 d3 ef 00  29 a3 75 b7 12 d3 ef 00  |..u.....).u.....|[0m
+[0;32mI (10055) RX_TASK: 0x3ffc8c6c   b9 b2 75 b7 12 d3 ef 00  52 c2 75 b7 12 d3 ef 00  |..u.....R.u.....|[0m
+[0;32mI (10065) RX_TASK: 0x3ffc8c7c   eb d1 75 b7 12 d3 ef 00  84 e1 75 b7 12 d3 ef 00  |..u.......u.....|[0m
+[0;32mI (10065) RX_TASK: 0x3ffc8c8c   28 f1 75 b7 12 d3 ef 00  b6 00 76 b7 12 d3 ef 00  |(.u.......v.....|[0m
+[0;32mI (10075) RX_TASK: 0x3ffc8c9c   4f 10 76 b7 12 d3 ef 00  e8 1f 76 b7 12 d3 ef 00  |O.v.......v.....|[0m
+[0;32mI (10085) RX_TASK: 0x3ffc8cac   82 2f 76 b7 12 d3 ef 00  23 3f 76 b7 12 d3 ef 00  |./v.....#?v.....|[0m
+[0;32mI (10095) RX_TASK: 0x3ffc8cbc   b4 4e 76 b7 12 d3 ef 00  4d 5e 76 b7 12 d3 ef 00  |.Nv.....M^v.....|[0m
+[0;32mI (10105) RX_TASK: 0x3ffc8ccc   e6 6d 76 b7 12 d3 ef 00  7f 7d 76 b7 12 d3 ef 00  |.mv......}v.....|[0m
+[0;32mI (10115) RX_TASK: 0x3ffc8cdc   20 8d 76 b7 12 d3 ef 00  b1 9c 76 b7 12 d3 ef 00  | .v.......v.....|[0m
+[0;32mI (10125) RX_TASK: 0x3ffc8cec   4a ac 76 b7 12 d3 ef 00  e3 bb 76 b7 12 d3 ef 00  |J.v.......v.....|[0m
+[0;32mI (10135) RX_TASK: 0x3ffc8cfc   7c cb 76 b7 12 d3 ef 00  1d db 76 b7 12 d3 ef 00  ||.v.......v.....|[0m
+[0;32mI (10145) RX_TASK: 0x3ffc8d0c   ae ea 76 b7 12 d3 ef 00  47 fa 76 b7 12 d3 ef 00  |..v.....G.v.....|[0m
+[0;32mI (10145) RX_TASK: 0x3ffc8d1c   e0 09 77 b7 12 d3 ef 00  79 19 77 b7 12 d3 ef 00  |..w.....y.w.....|[0m
+[0;32mI (10155) RX_TASK: 0x3ffc8d2c   1a 29 77 b7 12 d3 ef 00  ab 38 77 b7 12 d3 ef 00  |.)w......8w.....|[0m
+[0;32mI (10165) RX_TASK: 0x3ffc8d3c   44 48 77 b7 12 d3 ef 00  dd 57 77 b7 12 d3 ef 00  |DHw......Ww.....|[0m
+[0;32mI (10175) RX_TASK: 0x3ffc8d4c   76 67 77 b7 12 d3 ef 00  17 77 77 b7 12 d3 ef 00  |vgw......ww.....|[0m
+[0;32mI (10185) RX_TASK: 0x3ffc8d5c   a8 86 77 b7 12 d3 ef 00  41 96 77 b7 12 d3 ef 00  |..w.....A.w.....|[0m
+[0;32mI (10195) RX_TASK: 0x3ffc8d6c   da a5 77 b7 12 d3 ef 00  73 b5 77 b7 12 d3 ef 00  |..w.....s.w.....|[0m
+[0;32mI (10205) RX_TASK: 0x3ffc8d7c   14 c5 77 b7 12 d3 ef 00  a5 d4 77 b7 12 d3 ef 00  |..w.......w.....|[0m
+[0;32mI (10215) RX_TASK: 0x3ffc8d8c   5e e3 77 b7 12 d3 ef 00  eb f2 77 b7 12 d3 ef 00  |^.w.......w.....|[0m
+[0;32mI (10225) RX_TASK: 0x3ffc8d9c   71 04 78 b7 12 d3 ef 00  20 13 78 b7 12 d3 ef 00  |q.x..... .x.....|[0m
+[0;32mI (10225) RX_TASK: 0x3ffc8dac   9e 22 78 b7 12 d3 ef 00  37 32 78 b7 12 d3 ef 00  |."x.....72x.....|[0m
+[0;32mI (10235) RX_TASK: 0x3ffc8dbc   d0 41 78 b7 12 d3 ef 00  69 51 78 b7 12 d3 ef 00  |.Ax.....iQx.....|[0m
+[0;32mI (10245) RX_TASK: 0x3ffc8dcc   02 61 78 b7 12 d3 ef 00  9b 70 78 b7 12 d3 ef 00  |.ax......px.....|[0m
+[0;32mI (10255) RX_TASK: 0x3ffc8ddc   34 80 78 b7 12 d3 ef 00  cd 8f 78 b7 12 d3 ef 00  |4.x.......x.....|[0m
+[0;32mI (10265) RX_TASK: 0x3ffc8dec   66 9f 78 b7 12 d3 ef 00  ff ae 78 b7 12 d3 ef 00  |f.x.......x.....|[0m
+[0;32mI (10275) RX_TASK: 0x3ffc8dfc   98 be 78 b7 12 d3 ef 00  31 ce 78 b7 12 d3 ef 00  |..x.....1.x.....|[0m
+[0;32mI (10285) RX_TASK: 0x3ffc8e0c   ca dd 78 b7 12 d3 ef 00  63 ed 78 b7 12 d3 ef 00  |..x.....c.x.....|[0m
+[0;32mI (10295) RX_TASK: 0x3ffc8e1c   fc fc 78 b7 12 d3 ef 00  95 0c 79 b7 12 d3 ef 00  |..x.......y.....|[0m
+[0;32mI (10295) RX_TASK: 0x3ffc8e2c   2e 1c 79 b7 12 d3 ef 00  c7 2b 79 b7 12 d3 ef 00  |..y......+y.....|[0m
+[0;32mI (10305) RX_TASK: 0x3ffc8e3c   60 3b 79 b7 12 d3 ef 00  f9 4a 79 b7 12 d3 ef 00  |`;y......Jy.....|[0m
+[0;32mI (10315) RX_TASK: 0x3ffc8e4c   92 5a 79 b7 12 d3 ef 00  2b 6a 79 b7 12 d3 ef 00  |.Zy.....+jy.....|[0m
+[0;32mI (10325) RX_TASK: 0x3ffc8e5c   c4 79 79 b7 12 d3 ef 00  5d 89 79 b7 12 d3 ef 00  |.yy.....].y.....|[0m
+[0;32mI (10335) RX_TASK: 0x3ffc8e6c   f6 98 79 b7 12 d3 ef 00  8f a8 79 b7 12 d3 ef 00  |..y.......y.....|[0m
+[0;32mI (10345) RX_TASK: 0x3ffc8e7c   28 b8 79 b7 12 d3 ef 00  c1 c7 79 b7 12 d3 ef 00  |(.y.......y.....|[0m
+[0;32mI (10355) RX_TASK: 0x3ffc8e8c   5a d7 79 b7 12 d3 ef 00  f3 e6 79 b7 12 d3 ef 00  |Z.y.......y.....|[0m
+[0;32mI (10365) RX_TASK: 0x3ffc8e9c   8c f6 79 b7 12 d3 ef 00  25 06 7a b7 12 d3 ef 00  |..y.....%.z.....|[0m
+[0;32mI (10375) RX_TASK: Read 1024 bytes: timestamped: '67504596774950335', calculated delay: '794550'[0m
+[0;32mI (10375) RX_TASK: 0x3ffc8aac   bf 15 7a b7 12 d3 ef 00  57 25 7a b7 12 d3 ef 00  |..z.....W%z.....|[0m
+[0;32mI (10385) RX_TASK: 0x3ffc8abc   f1 34 7a b7 12 d3 ef 00  8a 44 7a b7 12 d3 ef 00  |.4z......Dz.....|[0m
+[0;32mI (10395) RX_TASK: 0x3ffc8acc   22 54 7a b7 12 d3 ef 00  bc 63 7a b7 12 d3 ef 00  |"Tz......cz.....|[0m
+[0;32mI (10405) RX_TASK: 0x3ffc8adc   54 73 7a b7 12 d3 ef 00  ee 82 7a b7 12 d3 ef 00  |Tsz.......z.....|[0m
+[0;32mI (10415) RX_TASK: 0x3ffc8aec   87 92 7a b7 12 d3 ef 00  20 a2 7a b7 12 d3 ef 00  |..z..... .z.....|[0m
+[0;32mI (10425) RX_TASK: 0x3ffc8afc   b9 b1 7a b7 12 d3 ef 00  52 c1 7a b7 12 d3 ef 00  |..z.....R.z.....|[0m
+[0;32mI (10435) RX_TASK: 0x3ffc8b0c   eb d0 7a b7 12 d3 ef 00  84 e0 7a b7 12 d3 ef 00  |..z.......z.....|[0m
+[0;32mI (10445) RX_TASK: 0x3ffc8b1c   1d f0 7a b7 12 d3 ef 00  c2 ff 7a b7 12 d3 ef 00  |..z.......z.....|[0m
+[0;32mI (10445) RX_TASK: 0x3ffc8b2c   67 0e 7b b7 12 d3 ef 00  fc 1d 7b b7 12 d3 ef 00  |g.{.......{.....|[0m
+[0;32mI (10455) RX_TASK: 0x3ffc8b3c   95 2d 7b b7 12 d3 ef 00  27 3f 7b b7 12 d3 ef 00  |.-{.....'?{.....|[0m
+[0;32mI (10465) RX_TASK: 0x3ffc8b4c   c2 4d 7b b7 12 d3 ef 00  48 5d 7b b7 12 d3 ef 00  |.M{.....H]{.....|[0m
+[0;32mI (10475) RX_TASK: 0x3ffc8b5c   e1 6c 7b b7 12 d3 ef 00  7a 7c 7b b7 12 d3 ef 00  |.l{.....z|{.....|[0m
+[0;32mI (10485) RX_TASK: 0x3ffc8b6c   13 8c 7b b7 12 d3 ef 00  ac 9b 7b b7 12 d3 ef 00  |..{.......{.....|[0m
+[0;32mI (10495) RX_TASK: 0x3ffc8b7c   45 ab 7b b7 12 d3 ef 00  de ba 7b b7 12 d3 ef 00  |E.{.......{.....|[0m
+[0;32mI (10505) RX_TASK: 0x3ffc8b8c   77 ca 7b b7 12 d3 ef 00  10 da 7b b7 12 d3 ef 00  |w.{.......{.....|[0m
+[0;32mI (10515) RX_TASK: 0x3ffc8b9c   a9 e9 7b b7 12 d3 ef 00  42 f9 7b b7 12 d3 ef 00  |..{.....B.{.....|[0m
+[0;32mI (10525) RX_TASK: 0x3ffc8bac   db 08 7c b7 12 d3 ef 00  74 18 7c b7 12 d3 ef 00  |..|.....t.|.....|[0m
+[0;32mI (10525) RX_TASK: 0x3ffc8bbc   0d 28 7c b7 12 d3 ef 00  a6 37 7c b7 12 d3 ef 00  |.(|......7|.....|[0m
+[0;32mI (10535) RX_TASK: 0x3ffc8bcc   3f 47 7c b7 12 d3 ef 00  d8 56 7c b7 12 d3 ef 00  |?G|......V|.....|[0m
+[0;32mI (10545) RX_TASK: 0x3ffc8bdc   71 66 7c b7 12 d3 ef 00  0a 76 7c b7 12 d3 ef 00  |qf|......v|.....|[0m
+[0;32mI (10555) RX_TASK: 0x3ffc8bec   a3 85 7c b7 12 d3 ef 00  3c 95 7c b7 12 d3 ef 00  |..|.....<.|.....|[0m
+[0;32mI (10565) RX_TASK: 0x3ffc8bfc   d5 a4 7c b7 12 d3 ef 00  6e b4 7c b7 12 d3 ef 00  |..|.....n.|.....|[0m
+[0;32mI (10575) RX_TASK: 0x3ffc8c0c   07 c4 7c b7 12 d3 ef 00  a0 d3 7c b7 12 d3 ef 00  |..|.......|.....|[0m
+[0;32mI (10585) RX_TASK: 0x3ffc8c1c   39 e3 7c b7 12 d3 ef 00  d2 f2 7c b7 12 d3 ef 00  |9.|.......|.....|[0m
+[0;32mI (10595) RX_TASK: 0x3ffc8c2c   6b 02 7d b7 12 d3 ef 00  04 12 7d b7 12 d3 ef 00  |k.}.......}.....|[0m
+[0;32mI (10605) RX_TASK: 0x3ffc8c3c   9d 21 7d b7 12 d3 ef 00  36 31 7d b7 12 d3 ef 00  |.!}.....61}.....|[0m
+[0;32mI (10605) RX_TASK: 0x3ffc8c4c   cf 40 7d b7 12 d3 ef 00  68 50 7d b7 12 d3 ef 00  |.@}.....hP}.....|[0m
+[0;32mI (10615) RX_TASK: 0x3ffc8c5c   01 60 7d b7 12 d3 ef 00  9a 6f 7d b7 12 d3 ef 00  |.`}......o}.....|[0m
+[0;32mI (10625) RX_TASK: 0x3ffc8c6c   33 7f 7d b7 12 d3 ef 00  cc 8e 7d b7 12 d3 ef 00  |3.}.......}.....|[0m
+[0;32mI (10635) RX_TASK: 0x3ffc8c7c   65 9e 7d b7 12 d3 ef 00  ff ad 7d b7 12 d3 ef 00  |e.}.......}.....|[0m
+[0;32mI (10645) RX_TASK: 0x3ffc8c8c   97 bd 7d b7 12 d3 ef 00  30 cd 7d b7 12 d3 ef 00  |..}.....0.}.....|[0m
+[0;32mI (10655) RX_TASK: 0x3ffc8c9c   c9 dc 7d b7 12 d3 ef 00  62 ec 7d b7 12 d3 ef 00  |..}.....b.}.....|[0m
+[0;32mI (10665) RX_TASK: 0x3ffc8cac   fb fb 7d b7 12 d3 ef 00  94 0b 7e b7 12 d3 ef 00  |..}.......~.....|[0m
+[0;32mI (10675) RX_TASK: 0x3ffc8cbc   2d 1b 7e b7 12 d3 ef 00  e7 29 7e b7 12 d3 ef 00  |-.~......)~.....|[0m
+[0;32mI (10685) RX_TASK: 0x3ffc8ccc   61 3b 7e b7 12 d3 ef 00  08 4a 7e b7 12 d3 ef 00  |a;~......J~.....|[0m
+[0;32mI (10685) RX_TASK: 0x3ffc8cdc   8e 59 7e b7 12 d3 ef 00  27 69 7e b7 12 d3 ef 00  |.Y~.....'i~.....|[0m
+[0;32mI (10695) RX_TASK: 0x3ffc8cec   c0 78 7e b7 12 d3 ef 00  59 88 7e b7 12 d3 ef 00  |.x~.....Y.~.....|[0m
+[0;32mI (10705) RX_TASK: 0x3ffc8cfc   f2 97 7e b7 12 d3 ef 00  8b a7 7e b7 12 d3 ef 00  |..~.......~.....|[0m
+[0;32mI (10715) RX_TASK: 0x3ffc8d0c   24 b7 7e b7 12 d3 ef 00  bd c6 7e b7 12 d3 ef 00  |$.~.......~.....|[0m
+[0;32mI (10725) RX_TASK: 0x3ffc8d1c   56 d6 7e b7 12 d3 ef 00  ef e5 7e b7 12 d3 ef 00  |V.~.......~.....|[0m
+[0;32mI (10735) RX_TASK: 0x3ffc8d2c   88 f5 7e b7 12 d3 ef 00  21 05 7f b7 12 d3 ef 00  |..~.....!.......|[0m
+[0;32mI (10745) RX_TASK: 0x3ffc8d3c   ba 14 7f b7 12 d3 ef 00  53 24 7f b7 12 d3 ef 00  |........S$......|[0m
+[0;32mI (10755) RX_TASK: 0x3ffc8d4c   ec 33 7f b7 12 d3 ef 00  85 43 7f b7 12 d3 ef 00  |.3.......C......|[0m
+[0;32mI (10755) RX_TASK: 0x3ffc8d5c   1e 53 7f b7 12 d3 ef 00  b7 62 7f b7 12 d3 ef 00  |.S.......b......|[0m
+[0;32mI (10765) RX_TASK: 0x3ffc8d6c   50 72 7f b7 12 d3 ef 00  e9 81 7f b7 12 d3 ef 00  |Pr..............|[0m
+[0;32mI (10775) RX_TASK: 0x3ffc8d7c   82 91 7f b7 12 d3 ef 00  1b a1 7f b7 12 d3 ef 00  |................|[0m
+[0;32mI (10785) RX_TASK: 0x3ffc8d8c   b4 b0 7f b7 12 d3 ef 00  4d c0 7f b7 12 d3 ef 00  |........M.......|[0m
+[0;32mI (10795) RX_TASK: 0x3ffc8d9c   e6 cf 7f b7 12 d3 ef 00  7f df 7f b7 12 d3 ef 00  |................|[0m
+[0;32mI (10805) RX_TASK: 0x3ffc8dac   18 ef 7f b7 12 d3 ef 00  b1 fe 7f b7 12 d3 ef 00  |................|[0m
+[0;32mI (10815) RX_TASK: 0x3ffc8dbc   4a 0e 80 b7 12 d3 ef 00  e3 1d 80 b7 12 d3 ef 00  |J...............|[0m
+[0;32mI (10825) RX_TASK: 0x3ffc8dcc   83 2d 80 b7 12 d3 ef 00  15 3d 80 b7 12 d3 ef 00  |.-.......=......|[0m
+[0;32mI (10835) RX_TASK: 0x3ffc8ddc   ae 4c 80 b7 12 d3 ef 00  47 5c 80 b7 12 d3 ef 00  |.L......G\......|[0m
+[0;32mI (10835) RX_TASK: 0x3ffc8dec   e0 6b 80 b7 12 d3 ef 00  7d 7b 80 b7 12 d3 ef 00  |.k......}{......|[0m
+[0;32mI (10845) RX_TASK: 0x3ffc8dfc   12 8b 80 b7 12 d3 ef 00  ab 9a 80 b7 12 d3 ef 00  |................|[0m
+[0;32mI (10855) RX_TASK: 0x3ffc8e0c   44 aa 80 b7 12 d3 ef 00  dd b9 80 b7 12 d3 ef 00  |D...............|[0m
+[0;32mI (10865) RX_TASK: 0x3ffc8e1c   77 c9 80 b7 12 d3 ef 00  0f d9 80 b7 12 d3 ef 00  |w...............|[0m
+[0;32mI (10875) RX_TASK: 0x3ffc8e2c   a8 e8 80 b7 12 d3 ef 00  41 f8 80 b7 12 d3 ef 00  |........A.......|[0m
+[0;32mI (10885) RX_TASK: 0x3ffc8e3c   da 07 81 b7 12 d3 ef 00  73 17 81 b7 12 d3 ef 00  |........s.......|[0m
+[0;32mI (10895) RX_TASK: 0x3ffc8e4c   10 27 81 b7 12 d3 ef 00  a9 36 81 b7 12 d3 ef 00  |.'.......6......|[0m
+[0;32mI (10905) RX_TASK: 0x3ffc8e5c   62 45 81 b7 12 d3 ef 00  ec 54 81 b7 12 d3 ef 00  |bE.......T......|[0m
+[0;32mI (10915) RX_TASK: 0x3ffc8e6c   7d 66 81 b7 12 d3 ef 00  18 75 81 b7 12 d3 ef 00  |}f.......u......|[0m
+[0;32mI (10915) RX_TASK: 0x3ffc8e7c   9e 84 81 b7 12 d3 ef 00  37 94 81 b7 12 d3 ef 00  |........7.......|[0m
+[0;32mI (10925) RX_TASK: 0x3ffc8e8c   d0 a3 81 b7 12 d3 ef 00  6a b3 81 b7 12 d3 ef 00  |........j.......|[0m
+[0;32mI (10935) RX_TASK: 0x3ffc8e9c   06 c3 81 b7 12 d3 ef 00  9f d2 81 b7 12 d3 ef 00  |................|[0m
+[0;32mI (10945) RX_TASK: Read 1024 bytes: timestamped: '67504596775461432', calculated delay: '858631'[0m
+[0;32mI (10955) RX_TASK: 0x3ffc8aac   38 e2 81 b7 12 d3 ef 00  cd f1 81 b7 12 d3 ef 00  |8...............|[0m
+[0;32mI (10965) RX_TASK: 0x3ffc8abc   67 01 82 b7 12 d3 ef 00  03 11 82 b7 12 d3 ef 00  |g...............|[0m
+[0;32mI (10975) RX_TASK: 0x3ffc8acc   9c 20 82 b7 12 d3 ef 00  35 30 82 b7 12 d3 ef 00  |. ......50......|[0m
+[0;32mI (10985) RX_TASK: 0x3ffc8adc   cb 3f 82 b7 12 d3 ef 00  65 4f 82 b7 12 d3 ef 00  |.?......eO......|[0m
+[0;32mI (10985) RX_TASK: 0x3ffc8aec   00 5f 82 b7 12 d3 ef 00  99 6e 82 b7 12 d3 ef 00  |._.......n......|[0m
+[0;32mI (10995) RX_TASK: 0x3ffc8afc   33 7e 82 b7 12 d3 ef 00  c8 8d 82 b7 12 d3 ef 00  |3~..............|[0m
+[0;32mI (11005) RX_TASK: 0x3ffc8b0c   63 9d 82 b7 12 d3 ef 00  fd ac 82 b7 12 d3 ef 00  |c...............|[0m
+[0;32mI (11015) RX_TASK: 0x3ffc8b1c   97 bc 82 b7 12 d3 ef 00  30 cc 82 b7 12 d3 ef 00  |........0.......|[0m
+[0;32mI (11025) RX_TASK: 0x3ffc8b2c   c5 db 82 b7 12 d3 ef 00  5e eb 82 b7 12 d3 ef 00  |........^.......|[0m
+[0;32mI (11035) RX_TASK: 0x3ffc8b3c   fb fa 82 b7 12 d3 ef 00  94 0a 83 b7 12 d3 ef 00  |................|[0m
+[0;32mI (11045) RX_TASK: 0x3ffc8b4c   75 1a 83 b7 12 d3 ef 00  ce 29 83 b7 12 d3 ef 00  |u........)......|[0m
+[0;32mI (11055) RX_TASK: 0x3ffc8b5c   5c 39 83 b7 12 d3 ef 00  f9 48 83 b7 12 d3 ef 00  |\9.......H......|[0m
+[0;32mI (11065) RX_TASK: 0x3ffc8b6c   92 58 83 b7 12 d3 ef 00  2b 68 83 b7 12 d3 ef 00  |.X......+h......|[0m
+[0;32mI (11065) RX_TASK: 0x3ffc8b7c   c0 77 83 b7 12 d3 ef 00  59 87 83 b7 12 d3 ef 00  |.w......Y.......|[0m
+[0;32mI (11075) RX_TASK: 0x3ffc8b8c   f2 96 83 b7 12 d3 ef 00  8b a6 83 b7 12 d3 ef 00  |................|[0m
+[0;32mI (11085) RX_TASK: 0x3ffc8b9c   24 b6 83 b7 12 d3 ef 00  bd c5 83 b7 12 d3 ef 00  |$...............|[0m
+[0;32mI (11095) RX_TASK: 0x3ffc8bac   56 d5 83 b7 12 d3 ef 00  ef e4 83 b7 12 d3 ef 00  |V...............|[0m
+[0;32mI (11105) RX_TASK: 0x3ffc8bbc   88 f4 83 b7 12 d3 ef 00  21 04 84 b7 12 d3 ef 00  |........!.......|[0m
+[0;32mI (11115) RX_TASK: 0x3ffc8bcc   ba 13 84 b7 12 d3 ef 00  53 23 84 b7 12 d3 ef 00  |........S#......|[0m
+[0;32mI (11125) RX_TASK: 0x3ffc8bdc   ec 32 84 b7 12 d3 ef 00  85 42 84 b7 12 d3 ef 00  |.2.......B......|[0m
+[0;32mI (11135) RX_TASK: 0x3ffc8bec   1e 52 84 b7 12 d3 ef 00  d8 60 84 b7 12 d3 ef 00  |.R.......`......|[0m
+[0;32mI (11145) RX_TASK: 0x3ffc8bfc   65 70 84 b7 12 d3 ef 00  fe 7f 84 b7 12 d3 ef 00  |ep..............|[0m
+[0;32mI (11145) RX_TASK: 0x3ffc8c0c   97 8f 84 b7 12 d3 ef 00  30 9f 84 b7 12 d3 ef 00  |........0.......|[0m
+[0;32mI (11155) RX_TASK: 0x3ffc8c1c   c9 ae 84 b7 12 d3 ef 00  62 be 84 b7 12 d3 ef 00  |........b.......|[0m
+[0;32mI (11165) RX_TASK: 0x3ffc8c2c   fb cf 84 b7 12 d3 ef 00  8f de 84 b7 12 d3 ef 00  |................|[0m
+[0;32mI (11175) RX_TASK: 0x3ffc8c3c   14 ee 84 b7 12 d3 ef 00  ad fd 84 b7 12 d3 ef 00  |................|[0m
+[0;32mI (11185) RX_TASK: 0x3ffc8c4c   46 0d 85 b7 12 d3 ef 00  df 1c 85 b7 12 d3 ef 00  |F...............|[0m
+[0;32mI (11195) RX_TASK: 0x3ffc8c5c   79 2c 85 b7 12 d3 ef 00  12 3c 85 b7 12 d3 ef 00  |y,.......<......|[0m
+[0;32mI (11205) RX_TASK: 0x3ffc8c6c   ab 4b 85 b7 12 d3 ef 00  44 5b 85 b7 12 d3 ef 00  |.K......D[......|[0m
+[0;32mI (11215) RX_TASK: 0x3ffc8c7c   dd 6a 85 b7 12 d3 ef 00  76 7a 85 b7 12 d3 ef 00  |.j......vz......|[0m
+[0;32mI (11215) RX_TASK: 0x3ffc8c8c   0f 8a 85 b7 12 d3 ef 00  a8 99 85 b7 12 d3 ef 00  |................|[0m
+[0;32mI (11225) RX_TASK: 0x3ffc8c9c   41 a9 85 b7 12 d3 ef 00  da b8 85 b7 12 d3 ef 00  |A...............|[0m
+[0;32mI (11235) RX_TASK: 0x3ffc8cac   73 c8 85 b7 12 d3 ef 00  0c d8 85 b7 12 d3 ef 00  |s...............|[0m
+[0;32mI (11245) RX_TASK: 0x3ffc8cbc   a5 e7 85 b7 12 d3 ef 00  3e f7 85 b7 12 d3 ef 00  |........>.......|[0m
+[0;32mI (11255) RX_TASK: 0x3ffc8ccc   d7 06 86 b7 12 d3 ef 00  70 16 86 b7 12 d3 ef 00  |........p.......|[0m
+[0;32mI (11265) RX_TASK: 0x3ffc8cdc   09 26 86 b7 12 d3 ef 00  a2 35 86 b7 12 d3 ef 00  |.&.......5......|[0m
+[0;32mI (11275) RX_TASK: 0x3ffc8cec   3b 45 86 b7 12 d3 ef 00  d4 54 86 b7 12 d3 ef 00  |;E.......T......|[0m
+[0;32mI (11285) RX_TASK: 0x3ffc8cfc   6d 64 86 b7 12 d3 ef 00  06 74 86 b7 12 d3 ef 00  |md.......t......|[0m
+[0;32mI (11295) RX_TASK: 0x3ffc8d0c   9f 83 86 b7 12 d3 ef 00  38 93 86 b7 12 d3 ef 00  |........8.......|[0m
+[0;32mI (11295) RX_TASK: 0x3ffc8d1c   d1 a2 86 b7 12 d3 ef 00  6a b2 86 b7 12 d3 ef 00  |........j.......|[0m
+[0;32mI (11305) RX_TASK: 0x3ffc8d2c   03 c2 86 b7 12 d3 ef 00  9c d1 86 b7 12 d3 ef 00  |................|[0m
+[0;32mI (11315) RX_TASK: 0x3ffc8d3c   37 e1 86 b7 12 d3 ef 00  ce f0 86 b7 12 d3 ef 00  |7...............|[0m
+[0;32mI (11325) RX_TASK: 0x3ffc8d4c   67 00 87 b7 12 d3 ef 00  00 10 87 b7 12 d3 ef 00  |g...............|[0m
+[0;32mI (11335) RX_TASK: 0x3ffc8d5c   99 1f 87 b7 12 d3 ef 00  38 2f 87 b7 12 d3 ef 00  |........8/......|[0m
+[0;32mI (11345) RX_TASK: 0x3ffc8d6c   cb 3e 87 b7 12 d3 ef 00  64 4e 87 b7 12 d3 ef 00  |.>......dN......|[0m
+[0;32mI (11355) RX_TASK: 0x3ffc8d7c   fd 5d 87 b7 12 d3 ef 00  96 6d 87 b7 12 d3 ef 00  |.].......m......|[0m
+[0;32mI (11365) RX_TASK: 0x3ffc8d8c   3e 7d 87 b7 12 d3 ef 00  e8 8b 87 b7 12 d3 ef 00  |>}..............|[0m
+[0;32mI (11375) RX_TASK: 0x3ffc8d9c   69 9d 87 b7 12 d3 ef 00  08 ac 87 b7 12 d3 ef 00  |i...............|[0m
+[0;32mI (11375) RX_TASK: 0x3ffc8dac   8e bb 87 b7 12 d3 ef 00  30 cb 87 b7 12 d3 ef 00  |........0.......|[0m
+[0;32mI (11385) RX_TASK: 0x3ffc8dbc   c0 da 87 b7 12 d3 ef 00  59 ea 87 b7 12 d3 ef 00  |........Y.......|[0m
+[0;32mI (11395) RX_TASK: 0x3ffc8dcc   f2 f9 87 b7 12 d3 ef 00  8b 09 88 b7 12 d3 ef 00  |................|[0m
+[0;32mI (11405) RX_TASK: 0x3ffc8ddc   2d 19 88 b7 12 d3 ef 00  bd 28 88 b7 12 d3 ef 00  |-........(......|[0m
+[0;32mI (11415) RX_TASK: 0x3ffc8dec   56 38 88 b7 12 d3 ef 00  ef 47 88 b7 12 d3 ef 00  |V8.......G......|[0m
+[0;32mI (11425) RX_TASK: 0x3ffc8dfc   88 57 88 b7 12 d3 ef 00  2a 67 88 b7 12 d3 ef 00  |.W......*g......|[0m
+[0;32mI (11435) RX_TASK: 0x3ffc8e0c   ba 76 88 b7 12 d3 ef 00  53 86 88 b7 12 d3 ef 00  |.v......S.......|[0m
+[0;32mI (11445) RX_TASK: 0x3ffc8e1c   ec 95 88 b7 12 d3 ef 00  85 a5 88 b7 12 d3 ef 00  |................|[0m
+[0;32mI (11455) RX_TASK: 0x3ffc8e2c   27 b5 88 b7 12 d3 ef 00  b7 c4 88 b7 12 d3 ef 00  |'...............|[0m
+[0;32mI (11455) RX_TASK: 0x3ffc8e3c   50 d4 88 b7 12 d3 ef 00  ea e3 88 b7 12 d3 ef 00  |P...............|[0m
+[0;32mI (11465) RX_TASK: 0x3ffc8e4c   83 f3 88 b7 12 d3 ef 00  24 03 89 b7 12 d3 ef 00  |........$.......|[0m
+[0;32mI (11475) RX_TASK: 0x3ffc8e5c   b4 12 89 b7 12 d3 ef 00  4e 22 89 b7 12 d3 ef 00  |........N"......|[0m
+[0;32mI (11485) RX_TASK: 0x3ffc8e6c   e7 31 89 b7 12 d3 ef 00  80 41 89 b7 12 d3 ef 00  |.1.......A......|[0m
+[0;32mI (11495) RX_TASK: 0x3ffc8e7c   21 51 89 b7 12 d3 ef 00  b2 60 89 b7 12 d3 ef 00  |!Q.......`......|[0m
+[0;32mI (11505) RX_TASK: 0x3ffc8e8c   4b 70 89 b7 12 d3 ef 00  e4 7f 89 b7 12 d3 ef 00  |Kp..............|[0m
+[0;32mI (11515) RX_TASK: 0x3ffc8e9c   7d 8f 89 b7 12 d3 ef 00  16 9f 89 b7 12 d3 ef 00  |}...............|[0m
+[0;32mI (11525) RX_TASK: Read 1024 bytes: timestamped: '67504596775972527', calculated delay: '922713'[0m
+[0;32mI (11525) RX_TASK: 0x3ffc8aac   af ae 89 b7 12 d3 ef 00  48 be 89 b7 12 d3 ef 00  |........H.......|[0m
+[0;32mI (11535) RX_TASK: 0x3ffc8abc   e1 cd 89 b7 12 d3 ef 00  7a dd 89 b7 12 d3 ef 00  |........z.......|[0m
+[0;32mI (11545) RX_TASK: 0x3ffc8acc   13 ed 89 b7 12 d3 ef 00  ac fc 89 b7 12 d3 ef 00  |................|[0m
+[0;32mI (11555) RX_TASK: 0x3ffc8adc   45 0c 8a b7 12 d3 ef 00  de 1b 8a b7 12 d3 ef 00  |E...............|[0m
+[0;32mI (11565) RX_TASK: 0x3ffc8aec   77 2b 8a b7 12 d3 ef 00  10 3b 8a b7 12 d3 ef 00  |w+.......;......|[0m
+[0;32mI (11575) RX_TASK: 0x3ffc8afc   a9 4a 8a b7 12 d3 ef 00  42 5a 8a b7 12 d3 ef 00  |.J......BZ......|[0m
+[0;32mI (11585) RX_TASK: 0x3ffc8b0c   db 69 8a b7 12 d3 ef 00  74 79 8a b7 12 d3 ef 00  |.i......ty......|[0m
+[0;32mI (11595) RX_TASK: 0x3ffc8b1c   0d 89 8a b7 12 d3 ef 00  a6 98 8a b7 12 d3 ef 00  |................|[0m
+[0;32mI (11605) RX_TASK: 0x3ffc8b2c   5f a7 8a b7 12 d3 ef 00  4b b7 8a b7 12 d3 ef 00  |_.......K.......|[0m
+[0;32mI (11605) RX_TASK: 0x3ffc8b3c   d4 c6 8a b7 12 d3 ef 00  45 d6 8a b7 12 d3 ef 00  |........E.......|[0m
+[0;32mI (11615) RX_TASK: 0x3ffc8b4c   b2 e5 8a b7 12 d3 ef 00  51 f5 8a b7 12 d3 ef 00  |........Q.......|[0m
+[0;32mI (11625) RX_TASK: 0x3ffc8b5c   3f 07 8b b7 12 d3 ef 00  df 15 8b b7 12 d3 ef 00  |?...............|[0m
+[0;32mI (11635) RX_TASK: 0x3ffc8b6c   7c 25 8b b7 12 d3 ef 00  0d 35 8b b7 12 d3 ef 00  ||%.......5......|[0m
+[0;32mI (11645) RX_TASK: 0x3ffc8b7c   ae 44 8b b7 12 d3 ef 00  3f 54 8b b7 12 d3 ef 00  |.D......?T......|[0m
+[0;32mI (11655) RX_TASK: 0x3ffc8b8c   e0 63 8b b7 12 d3 ef 00  71 73 8b b7 12 d3 ef 00  |.c......qs......|[0m
+[0;32mI (11665) RX_TASK: 0x3ffc8b9c   12 83 8b b7 12 d3 ef 00  a3 92 8b b7 12 d3 ef 00  |................|[0m
+[0;32mI (11675) RX_TASK: 0x3ffc8bac   44 a2 8b b7 12 d3 ef 00  d5 b1 8b b7 12 d3 ef 00  |D...............|[0m
+[0;32mI (11675) RX_TASK: 0x3ffc8bbc   76 c1 8b b7 12 d3 ef 00  07 d1 8b b7 12 d3 ef 00  |v...............|[0m
+[0;32mI (11685) RX_TASK: 0x3ffc8bcc   a8 e0 8b b7 12 d3 ef 00  39 f0 8b b7 12 d3 ef 00  |........9.......|[0m
+[0;32mI (11695) RX_TASK: 0x3ffc8bdc   da ff 8b b7 12 d3 ef 00  6b 0f 8c b7 12 d3 ef 00  |........k.......|[0m
+[0;32mI (11705) RX_TASK: 0x3ffc8bec   0c 1f 8c b7 12 d3 ef 00  9d 2e 8c b7 12 d3 ef 00  |................|[0m
+[0;32mI (11715) RX_TASK: 0x3ffc8bfc   3e 3e 8c b7 12 d3 ef 00  cf 4d 8c b7 12 d3 ef 00  |>>.......M......|[0m
+[0;32mI (11725) RX_TASK: 0x3ffc8c0c   70 5d 8c b7 12 d3 ef 00  01 6d 8c b7 12 d3 ef 00  |p].......m......|[0m
+[0;32mI (11735) RX_TASK: 0x3ffc8c1c   a2 7c 8c b7 12 d3 ef 00  33 8c 8c b7 12 d3 ef 00  |.|......3.......|[0m
+[0;32mI (11745) RX_TASK: 0x3ffc8c2c   d4 9b 8c b7 12 d3 ef 00  65 ab 8c b7 12 d3 ef 00  |........e.......|[0m
+[0;32mI (11755) RX_TASK: 0x3ffc8c3c   06 bb 8c b7 12 d3 ef 00  97 ca 8c b7 12 d3 ef 00  |................|[0m
+[0;32mI (11755) RX_TASK: 0x3ffc8c4c   38 da 8c b7 12 d3 ef 00  c9 e9 8c b7 12 d3 ef 00  |8...............|[0m
+[0;32mI (11765) RX_TASK: 0x3ffc8c5c   6a f9 8c b7 12 d3 ef 00  fb 08 8d b7 12 d3 ef 00  |j...............|[0m
+[0;32mI (11775) RX_TASK: 0x3ffc8c6c   9c 18 8d b7 12 d3 ef 00  2e 28 8d b7 12 d3 ef 00  |.........(......|[0m
+[0;32mI (11785) RX_TASK: 0x3ffc8c7c   ce 37 8d b7 12 d3 ef 00  60 47 8d b7 12 d3 ef 00  |.7......`G......|[0m
+[0;32mI (11795) RX_TASK: 0x3ffc8c8c   00 57 8d b7 12 d3 ef 00  91 66 8d b7 12 d3 ef 00  |.W.......f......|[0m
+[0;32mI (11805) RX_TASK: 0x3ffc8c9c   32 76 8d b7 12 d3 ef 00  c4 85 8d b7 12 d3 ef 00  |2v..............|[0m
+[0;32mI (11815) RX_TASK: 0x3ffc8cac   64 95 8d b7 12 d3 ef 00  f6 a4 8d b7 12 d3 ef 00  |d...............|[0m
+[0;32mI (11825) RX_TASK: 0x3ffc8cbc   96 b4 8d b7 12 d3 ef 00  fe c2 8d b7 12 d3 ef 00  |................|[0m
+[0;32mI (11835) RX_TASK: 0x3ffc8ccc   67 d2 8d b7 12 d3 ef 00  6b e4 8d b7 12 d3 ef 00  |g.......k.......|[0m
+[0;32mI (11835) RX_TASK: 0x3ffc8cdc   3e f3 8d b7 12 d3 ef 00  9f 02 8e b7 12 d3 ef 00  |>...............|[0m
+[0;32mI (11845) RX_TASK: 0x3ffc8cec   38 12 8e b7 12 d3 ef 00  d1 21 8e b7 12 d3 ef 00  |8........!......|[0m
+[0;32mI (11855) RX_TASK: 0x3ffc8cfc   6a 31 8e b7 12 d3 ef 00  03 41 8e b7 12 d3 ef 00  |j1.......A......|[0m
+[0;32mI (11865) RX_TASK: 0x3ffc8d0c   9c 50 8e b7 12 d3 ef 00  35 60 8e b7 12 d3 ef 00  |.P......5`......|[0m
+[0;32mI (11875) RX_TASK: 0x3ffc8d1c   cf 6f 8e b7 12 d3 ef 00  67 7f 8e b7 12 d3 ef 00  |.o......g.......|[0m
+[0;32mI (11885) RX_TASK: 0x3ffc8d2c   01 8f 8e b7 12 d3 ef 00  9a 9e 8e b7 12 d3 ef 00  |................|[0m
+[0;32mI (11895) RX_TASK: 0x3ffc8d3c   33 ae 8e b7 12 d3 ef 00  cc bd 8e b7 12 d3 ef 00  |3...............|[0m
+[0;32mI (11905) RX_TASK: 0x3ffc8d4c   65 cd 8e b7 12 d3 ef 00  fe dc 8e b7 12 d3 ef 00  |e...............|[0m
+[0;32mI (11915) RX_TASK: 0x3ffc8d5c   97 ec 8e b7 12 d3 ef 00  30 fc 8e b7 12 d3 ef 00  |........0.......|[0m
+[0;32mI (11915) RX_TASK: 0x3ffc8d6c   c9 0b 8f b7 12 d3 ef 00  62 1b 8f b7 12 d3 ef 00  |........b.......|[0m
+[0;32mI (11925) RX_TASK: 0x3ffc8d7c   fb 2a 8f b7 12 d3 ef 00  94 3a 8f b7 12 d3 ef 00  |.*.......:......|[0m
+[0;32mI (11935) RX_TASK: 0x3ffc8d8c   2d 4a 8f b7 12 d3 ef 00  c6 59 8f b7 12 d3 ef 00  |-J.......Y......|[0m
+[0;32mI (11945) RX_TASK: 0x3ffc8d9c   5f 69 8f b7 12 d3 ef 00  f8 78 8f b7 12 d3 ef 00  |_i.......x......|[0m
+[0;32mI (11955) RX_TASK: 0x3ffc8dac   91 88 8f b7 12 d3 ef 00  2a 98 8f b7 12 d3 ef 00  |........*.......|[0m
+[0;32mI (11965) RX_TASK: 0x3ffc8dbc   c3 a7 8f b7 12 d3 ef 00  5c b7 8f b7 12 d3 ef 00  |........\.......|[0m
+[0;32mI (11975) RX_TASK: 0x3ffc8dcc   f5 c6 8f b7 12 d3 ef 00  8e d6 8f b7 12 d3 ef 00  |................|[0m
+[0;32mI (11985) RX_TASK: 0x3ffc8ddc   27 e6 8f b7 12 d3 ef 00  c0 f5 8f b7 12 d3 ef 00  |'...............|[0m
+[0;32mI (11985) RX_TASK: 0x3ffc8dec   59 05 90 b7 12 d3 ef 00  f2 14 90 b7 12 d3 ef 00  |Y...............|[0m
+[0;32mI (11995) RX_TASK: 0x3ffc8dfc   8b 24 90 b7 12 d3 ef 00  24 34 90 b7 12 d3 ef 00  |.$......$4......|[0m
+[0;32mI (12005) RX_TASK: 0x3ffc8e0c   bd 43 90 b7 12 d3 ef 00  56 53 90 b7 12 d3 ef 00  |.C......VS......|[0m
+[0;32mI (12015) RX_TASK: 0x3ffc8e1c   ef 62 90 b7 12 d3 ef 00  88 72 90 b7 12 d3 ef 00  |.b.......r......|[0m
+[0;32mI (12025) RX_TASK: 0x3ffc8e2c   21 82 90 b7 12 d3 ef 00  ba 91 90 b7 12 d3 ef 00  |!...............|[0m
+[0;32mI (12035) RX_TASK: 0x3ffc8e3c   53 a1 90 b7 12 d3 ef 00  ec b0 90 b7 12 d3 ef 00  |S...............|[0m
+[0;32mI (12045) RX_TASK: 0x3ffc8e4c   85 c0 90 b7 12 d3 ef 00  1e d0 90 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12055) RX_TASK: 0x3ffc8e5c   5a e0 90 b7 12 d3 ef 00  df ed 90 b7 12 d3 ef 00  |Z...............|[0m
+[0;32mI (12065) RX_TASK: 0x3ffc8e6c   c7 ff 90 b7 12 d3 ef 00  08 0e 91 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12065) RX_TASK: 0x3ffc8e7c   92 1d 91 b7 12 d3 ef 00  23 2d 91 b7 12 d3 ef 00  |........#-......|[0m
+[0;32mI (12075) RX_TASK: 0x3ffc8e8c   bc 3c 91 b7 12 d3 ef 00  55 4c 91 b7 12 d3 ef 00  |.<......UL......|[0m
+[0;32mI (12085) RX_TASK: 0x3ffc8e9c   ee 5b 91 b7 12 d3 ef 00  87 6b 91 b7 12 d3 ef 00  |.[.......k......|[0m
+[0;32mI (12095) RX_TASK: Read 1024 bytes: timestamped: '67504596776483616', calculated delay: '986265'[0m
+[0;32mI (12105) RX_TASK: 0x3ffc8aac   20 7b 91 b7 12 d3 ef 00  b9 8a 91 b7 12 d3 ef 00  | {..............|[0m
+[0;32mI (12115) RX_TASK: 0x3ffc8abc   52 9a 91 b7 12 d3 ef 00  eb a9 91 b7 12 d3 ef 00  |R...............|[0m
+[0;32mI (12125) RX_TASK: 0x3ffc8acc   86 b9 91 b7 12 d3 ef 00  1d c9 91 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12135) RX_TASK: 0x3ffc8adc   b6 d8 91 b7 12 d3 ef 00  4f e8 91 b7 12 d3 ef 00  |........O.......|[0m
+[0;32mI (12135) RX_TASK: 0x3ffc8aec   e8 f7 91 b7 12 d3 ef 00  81 07 92 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12145) RX_TASK: 0x3ffc8afc   1a 17 92 b7 12 d3 ef 00  b3 26 92 b7 12 d3 ef 00  |.........&......|[0m
+[0;32mI (12155) RX_TASK: 0x3ffc8b0c   4c 36 92 b7 12 d3 ef 00  e5 45 92 b7 12 d3 ef 00  |L6.......E......|[0m
+[0;32mI (12165) RX_TASK: 0x3ffc8b1c   cd 55 92 b7 12 d3 ef 00  2a 65 92 b7 12 d3 ef 00  |.U......*e......|[0m
+[0;32mI (12175) RX_TASK: 0x3ffc8b2c   b8 74 92 b7 12 d3 ef 00  51 84 92 b7 12 d3 ef 00  |.t......Q.......|[0m
+[0;32mI (12185) RX_TASK: 0x3ffc8b3c   e2 93 92 b7 12 d3 ef 00  7b a3 92 b7 12 d3 ef 00  |........{.......|[0m
+[0;32mI (12195) RX_TASK: 0x3ffc8b4c   1c b3 92 b7 12 d3 ef 00  b5 c2 92 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12205) RX_TASK: 0x3ffc8b5c   4e d2 92 b7 12 d3 ef 00  df e1 92 b7 12 d3 ef 00  |N...............|[0m
+[0;32mI (12215) RX_TASK: 0x3ffc8b6c   79 f1 92 b7 12 d3 ef 00  19 01 93 b7 12 d3 ef 00  |y...............|[0m
+[0;32mI (12215) RX_TASK: 0x3ffc8b7c   b2 10 93 b7 12 d3 ef 00  4b 20 93 b7 12 d3 ef 00  |........K ......|[0m
+[0;32mI (12225) RX_TASK: 0x3ffc8b8c   dc 2f 93 b7 12 d3 ef 00  76 3f 93 b7 12 d3 ef 00  |./......v?......|[0m
+[0;32mI (12235) RX_TASK: 0x3ffc8b9c   16 4f 93 b7 12 d3 ef 00  af 5e 93 b7 12 d3 ef 00  |.O.......^......|[0m
+[0;32mI (12245) RX_TASK: 0x3ffc8bac   48 6e 93 b7 12 d3 ef 00  d9 7d 93 b7 12 d3 ef 00  |Hn.......}......|[0m
+[0;32mI (12255) RX_TASK: 0x3ffc8bbc   73 8d 93 b7 12 d3 ef 00  13 9d 93 b7 12 d3 ef 00  |s...............|[0m
+[0;32mI (12265) RX_TASK: 0x3ffc8bcc   ac ac 93 b7 12 d3 ef 00  45 bc 93 b7 12 d3 ef 00  |........E.......|[0m
+[0;32mI (12275) RX_TASK: 0x3ffc8bdc   d6 cb 93 b7 12 d3 ef 00  71 db 93 b7 12 d3 ef 00  |........q.......|[0m
+[0;32mI (12285) RX_TASK: 0x3ffc8bec   10 eb 93 b7 12 d3 ef 00  a9 fa 93 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12295) RX_TASK: 0x3ffc8bfc   5e 09 94 b7 12 d3 ef 00  f5 1a 94 b7 12 d3 ef 00  |^...............|[0m
+[0;32mI (12295) RX_TASK: 0x3ffc8c0c   85 29 94 b7 12 d3 ef 00  0e 39 94 b7 12 d3 ef 00  |.).......9......|[0m
+[0;32mI (12305) RX_TASK: 0x3ffc8c1c   a7 48 94 b7 12 d3 ef 00  40 58 94 b7 12 d3 ef 00  |.H......@X......|[0m
+[0;32mI (12315) RX_TASK: 0x3ffc8c2c   d1 67 94 b7 12 d3 ef 00  6b 77 94 b7 12 d3 ef 00  |.g......kw......|[0m
+[0;32mI (12325) RX_TASK: 0x3ffc8c3c   0b 87 94 b7 12 d3 ef 00  a4 96 94 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12335) RX_TASK: 0x3ffc8c4c   3d a6 94 b7 12 d3 ef 00  ce b5 94 b7 12 d3 ef 00  |=...............|[0m
+[0;32mI (12345) RX_TASK: 0x3ffc8c5c   68 c5 94 b7 12 d3 ef 00  00 d5 94 b7 12 d3 ef 00  |h...............|[0m
+[0;32mI (12355) RX_TASK: 0x3ffc8c6c   9a e4 94 b7 12 d3 ef 00  33 f4 94 b7 12 d3 ef 00  |........3.......|[0m
+[0;32mI (12365) RX_TASK: 0x3ffc8c7c   cc 03 95 b7 12 d3 ef 00  65 13 95 b7 12 d3 ef 00  |........e.......|[0m
+[0;32mI (12375) RX_TASK: 0x3ffc8c8c   fe 22 95 b7 12 d3 ef 00  97 32 95 b7 12 d3 ef 00  |.".......2......|[0m
+[0;32mI (12375) RX_TASK: 0x3ffc8c9c   30 42 95 b7 12 d3 ef 00  c9 51 95 b7 12 d3 ef 00  |0B.......Q......|[0m
+[0;32mI (12385) RX_TASK: 0x3ffc8cac   62 61 95 b7 12 d3 ef 00  fb 70 95 b7 12 d3 ef 00  |ba.......p......|[0m
+[0;32mI (12395) RX_TASK: 0x3ffc8cbc   94 80 95 b7 12 d3 ef 00  2d 90 95 b7 12 d3 ef 00  |........-.......|[0m
+[0;32mI (12405) RX_TASK: 0x3ffc8ccc   c6 9f 95 b7 12 d3 ef 00  5f af 95 b7 12 d3 ef 00  |........_.......|[0m
+[0;32mI (12415) RX_TASK: 0x3ffc8cdc   f8 be 95 b7 12 d3 ef 00  91 ce 95 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12425) RX_TASK: 0x3ffc8cec   2a de 95 b7 12 d3 ef 00  c3 ed 95 b7 12 d3 ef 00  |*...............|[0m
+[0;32mI (12435) RX_TASK: 0x3ffc8cfc   5c fd 95 b7 12 d3 ef 00  f5 0c 96 b7 12 d3 ef 00  |\...............|[0m
+[0;32mI (12445) RX_TASK: 0x3ffc8d0c   8e 1c 96 b7 12 d3 ef 00  27 2c 96 b7 12 d3 ef 00  |........',......|[0m
+[0;32mI (12445) RX_TASK: 0x3ffc8d1c   c0 3b 96 b7 12 d3 ef 00  59 4b 96 b7 12 d3 ef 00  |.;......YK......|[0m
+[0;32mI (12455) RX_TASK: 0x3ffc8d2c   f2 5a 96 b7 12 d3 ef 00  8b 6a 96 b7 12 d3 ef 00  |.Z.......j......|[0m
+[0;32mI (12465) RX_TASK: 0x3ffc8d3c   24 7a 96 b7 12 d3 ef 00  bd 89 96 b7 12 d3 ef 00  |$z..............|[0m
+[0;32mI (12475) RX_TASK: 0x3ffc8d4c   56 99 96 b7 12 d3 ef 00  ef a8 96 b7 12 d3 ef 00  |V...............|[0m
+[0;32mI (12485) RX_TASK: 0x3ffc8d5c   88 b8 96 b7 12 d3 ef 00  21 c8 96 b7 12 d3 ef 00  |........!.......|[0m
+[0;32mI (12495) RX_TASK: 0x3ffc8d6c   ba d7 96 b7 12 d3 ef 00  53 e7 96 b7 12 d3 ef 00  |........S.......|[0m
+[0;32mI (12505) RX_TASK: 0x3ffc8d7c   ec f6 96 b7 12 d3 ef 00  85 06 97 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12515) RX_TASK: 0x3ffc8d8c   1e 16 97 b7 12 d3 ef 00  d7 24 97 b7 12 d3 ef 00  |.........$......|[0m
+[0;32mI (12525) RX_TASK: 0x3ffc8d9c   64 34 97 b7 12 d3 ef 00  f2 45 97 b7 12 d3 ef 00  |d4.......E......|[0m
+[0;32mI (12525) RX_TASK: 0x3ffc8dac   8d 54 97 b7 12 d3 ef 00  17 64 97 b7 12 d3 ef 00  |.T.......d......|[0m
+[0;32mI (12535) RX_TASK: 0x3ffc8dbc   b0 73 97 b7 12 d3 ef 00  49 83 97 b7 12 d3 ef 00  |.s......I.......|[0m
+[0;32mI (12545) RX_TASK: 0x3ffc8dcc   e2 92 97 b7 12 d3 ef 00  7b a2 97 b7 12 d3 ef 00  |........{.......|[0m
+[0;32mI (12555) RX_TASK: 0x3ffc8ddc   14 b2 97 b7 12 d3 ef 00  ad c1 97 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12565) RX_TASK: 0x3ffc8dec   46 d1 97 b7 12 d3 ef 00  df e0 97 b7 12 d3 ef 00  |F...............|[0m
+[0;32mI (12575) RX_TASK: 0x3ffc8dfc   78 f0 97 b7 12 d3 ef 00  11 00 98 b7 12 d3 ef 00  |x...............|[0m
+[0;32mI (12585) RX_TASK: 0x3ffc8e0c   aa 0f 98 b7 12 d3 ef 00  44 1f 98 b7 12 d3 ef 00  |........D.......|[0m
+[0;32mI (12595) RX_TASK: 0x3ffc8e1c   dc 2e 98 b7 12 d3 ef 00  75 3e 98 b7 12 d3 ef 00  |........u>......|[0m
+[0;32mI (12605) RX_TASK: 0x3ffc8e2c   0e 4e 98 b7 12 d3 ef 00  a7 5d 98 b7 12 d3 ef 00  |.N.......]......|[0m
+[0;32mI (12605) RX_TASK: 0x3ffc8e3c   44 6d 98 b7 12 d3 ef 00  d9 7c 98 b7 12 d3 ef 00  |Dm.......|......|[0m
+[0;32mI (12615) RX_TASK: 0x3ffc8e4c   73 8c 98 b7 12 d3 ef 00  0c 9c 98 b7 12 d3 ef 00  |s...............|[0m
+[0;32mI (12625) RX_TASK: 0x3ffc8e5c   a5 ab 98 b7 12 d3 ef 00  46 bb 98 b7 12 d3 ef 00  |........F.......|[0m
+[0;32mI (12635) RX_TASK: 0x3ffc8e6c   d7 ca 98 b7 12 d3 ef 00  70 da 98 b7 12 d3 ef 00  |........p.......|[0m
+[0;32mI (12645) RX_TASK: 0x3ffc8e7c   09 ea 98 b7 12 d3 ef 00  a2 f9 98 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12655) RX_TASK: 0x3ffc8e8c   41 09 99 b7 12 d3 ef 00  d4 18 99 b7 12 d3 ef 00  |A...............|[0m
+[0;32mI (12665) RX_TASK: 0x3ffc8e9c   6d 28 99 b7 12 d3 ef 00  06 38 99 b7 12 d3 ef 00  |m(.......8......|[0m
+[0;32mI (12675) RX_TASK: Read 1024 bytes: timestamped: '67504596776994719', calculated delay: '1050805'[0m
+[0;32mI (12675) RX_TASK: 0x3ffc8aac   9f 47 99 b7 12 d3 ef 00  40 57 99 b7 12 d3 ef 00  |.G......@W......|[0m
+[0;32mI (12685) RX_TASK: 0x3ffc8abc   d1 66 99 b7 12 d3 ef 00  6a 76 99 b7 12 d3 ef 00  |.f......jv......|[0m
+[0;32mI (12695) RX_TASK: 0x3ffc8acc   03 86 99 b7 12 d3 ef 00  9c 95 99 b7 12 d3 ef 00  |................|[0m
+[0;32mI (12705) RX_TASK: 0x3ffc8adc   3d a5 99 b7 12 d3 ef 00  ce b4 99 b7 12 d3 ef 00  |=...............|[0m
+[0;32mI (12715) RX_TASK: 0x3ffc8aec   67 c4 99 b7 12 d3 ef 00  00 d4 99 b7 12 d3 ef 00  |g...............|[0m
+[0;32mI (12725) RX_TASK: 0x3ffc8afc   99 e3 99 b7 12 d3 ef 00  3a f3 99 b7 12 d3 ef 00  |........:.......|[0m
+[0;32mI (12735) RX_TASK: 0x3ffc8b0c   cb 02 9a b7 12 d3 ef 00  64 12 9a b7 12 d3 ef 00  |........d.......|[0m
+[0;32mI (12745) RX_TASK: 0x3ffc8b1c   fd 21 9a b7 12 d3 ef 00  96 31 9a b7 12 d3 ef 00  |.!.......1......|[0m
+[0;32mI (12755) RX_TASK: 0x3ffc8b2c   4f 40 9a b7 12 d3 ef 00  dc 4f 9a b7 12 d3 ef 00  |O@.......O......|[0m
+[0;32mI (12755) RX_TASK: 0x3ffc8b3c   66 61 9a b7 12 d3 ef 00  05 70 9a b7 12 d3 ef 00  |fa.......p......|[0m
+[0;32mI (12765) RX_TASK: 0x3ffc8b4c   8f 7f 9a b7 12 d3 ef 00  30 8f 9a b7 12 d3 ef 00  |........0.......|[0m
+[0;32mI (12775) RX_TASK: 0x3ffc8b5c   c1 9e 9a b7 12 d3 ef 00  5a ae 9a b7 12 d3 ef 00  |........Z.......|[0m
+[0;32mI (12785) RX_TASK: 0x3ffc8b6c   f3 bd 9a b7 12 d3 ef 00  8c cd 9a b7 12 d3 ef 00  |................|[0m
+[0;32mI (12795) RX_TASK: 0x3ffc8b7c   2d dd 9a b7 12 d3 ef 00  be ec 9a b7 12 d3 ef 00  |-...............|[0m
+[0;32mI (12805) RX_TASK: 0x3ffc8b8c   57 fc 9a b7 12 d3 ef 00  f0 0b 9b b7 12 d3 ef 00  |W...............|[0m
+[0;32mI (12815) RX_TASK: 0x3ffc8b9c   89 1b 9b b7 12 d3 ef 00  22 2b 9b b7 12 d3 ef 00  |........"+......|[0m
+[0;32mI (12825) RX_TASK: 0x3ffc8bac   bb 3a 9b b7 12 d3 ef 00  54 4a 9b b7 12 d3 ef 00  |.:......TJ......|[0m
+[0;32mI (12835) RX_TASK: 0x3ffc8bbc   ed 59 9b b7 12 d3 ef 00  86 69 9b b7 12 d3 ef 00  |.Y.......i......|[0m
+[0;32mI (12835) RX_TASK: 0x3ffc8bcc   1f 79 9b b7 12 d3 ef 00  b8 88 9b b7 12 d3 ef 00  |.y..............|[0m
+[0;32mI (12845) RX_TASK: 0x3ffc8bdc   51 98 9b b7 12 d3 ef 00  ea a7 9b b7 12 d3 ef 00  |Q...............|[0m
+[0;32mI (12855) RX_TASK: 0x3ffc8bec   83 b7 9b b7 12 d3 ef 00  1c c7 9b b7 12 d3 ef 00  |................|[0m
+[0;32mI (12865) RX_TASK: 0x3ffc8bfc   b5 d6 9b b7 12 d3 ef 00  4e e6 9b b7 12 d3 ef 00  |........N.......|[0m
+[0;32mI (12875) RX_TASK: 0x3ffc8c0c   e7 f5 9b b7 12 d3 ef 00  80 05 9c b7 12 d3 ef 00  |................|[0m
+[0;32mI (12885) RX_TASK: 0x3ffc8c1c   19 15 9c b7 12 d3 ef 00  b2 24 9c b7 12 d3 ef 00  |.........$......|[0m
+[0;32mI (12895) RX_TASK: 0x3ffc8c2c   4b 34 9c b7 12 d3 ef 00  e4 43 9c b7 12 d3 ef 00  |K4.......C......|[0m
+[0;32mI (12905) RX_TASK: 0x3ffc8c3c   7d 53 9c b7 12 d3 ef 00  16 63 9c b7 12 d3 ef 00  |}S.......c......|[0m
+[0;32mI (12915) RX_TASK: 0x3ffc8c4c   af 72 9c b7 12 d3 ef 00  48 82 9c b7 12 d3 ef 00  |.r......H.......|[0m
+[0;32mI (12915) RX_TASK: 0x3ffc8c5c   e1 91 9c b7 12 d3 ef 00  7a a1 9c b7 12 d3 ef 00  |........z.......|[0m
+[0;32mI (12925) RX_TASK: 0x3ffc8c6c   14 b1 9c b7 12 d3 ef 00  ad c0 9c b7 12 d3 ef 00  |................|[0m
+[0;32mI (12935) RX_TASK: 0x3ffc8c7c   46 d0 9c b7 12 d3 ef 00  df df 9c b7 12 d3 ef 00  |F...............|[0m
+[0;32mI (12945) RX_TASK: 0x3ffc8c8c   78 ef 9c b7 12 d3 ef 00  11 ff 9c b7 12 d3 ef 00  |x...............|[0m
+[0;32mI (12955) RX_TASK: 0x3ffc8c9c   aa 0e 9d b7 12 d3 ef 00  43 1e 9d b7 12 d3 ef 00  |........C.......|[0m
+[0;32mI (12965) RX_TASK: 0x3ffc8cac   dc 2d 9d b7 12 d3 ef 00  75 3d 9d b7 12 d3 ef 00  |.-......u=......|[0m
+[0;32mI (12975) RX_TASK: 0x3ffc8cbc   0e 4d 9d b7 12 d3 ef 00  a7 5c 9d b7 12 d3 ef 00  |.M.......\......|[0m
+[0;32mI (12985) RX_TASK: 0x3ffc8ccc   60 6b 9d b7 12 d3 ef 00  dd 7c 9d b7 12 d3 ef 00  |`k.......|......|[0m
+[0;32mI (12985) RX_TASK: 0x3ffc8cdc   7d 8b 9d b7 12 d3 ef 00  07 9b 9d b7 12 d3 ef 00  |}...............|[0m
+[0;32mI (12995) RX_TASK: 0x3ffc8cec   a0 aa 9d b7 12 d3 ef 00  39 ba 9d b7 12 d3 ef 00  |........9.......|[0m
+[0;32mI (13005) RX_TASK: 0x3ffc8cfc   d2 c9 9d b7 12 d3 ef 00  6b d9 9d b7 12 d3 ef 00  |........k.......|[0m
+[0;32mI (13015) RX_TASK: 0x3ffc8d0c   04 e9 9d b7 12 d3 ef 00  9d f8 9d b7 12 d3 ef 00  |................|[0m
+[0;32mI (13025) RX_TASK: 0x3ffc8d1c   36 08 9e b7 12 d3 ef 00  cf 17 9e b7 12 d3 ef 00  |6...............|[0m
+[0;32mI (13035) RX_TASK: 0x3ffc8d2c   68 27 9e b7 12 d3 ef 00  01 37 9e b7 12 d3 ef 00  |h'.......7......|[0m
+[0;32mI (13045) RX_TASK: 0x3ffc8d3c   9a 46 9e b7 12 d3 ef 00  33 56 9e b7 12 d3 ef 00  |.F......3V......|[0m
+[0;32mI (13055) RX_TASK: 0x3ffc8d4c   cc 65 9e b7 12 d3 ef 00  65 75 9e b7 12 d3 ef 00  |.e......eu......|[0m
+[0;32mI (13065) RX_TASK: 0x3ffc8d5c   fe 84 9e b7 12 d3 ef 00  97 94 9e b7 12 d3 ef 00  |................|[0m
+[0;32mI (13065) RX_TASK: 0x3ffc8d6c   30 a4 9e b7 12 d3 ef 00  c9 b3 9e b7 12 d3 ef 00  |0...............|[0m
+[0;32mI (13075) RX_TASK: 0x3ffc8d7c   62 c3 9e b7 12 d3 ef 00  fb d2 9e b7 12 d3 ef 00  |b...............|[0m
+[0;32mI (13085) RX_TASK: 0x3ffc8d8c   94 e2 9e b7 12 d3 ef 00  2d f2 9e b7 12 d3 ef 00  |........-.......|[0m
+[0;32mI (13095) RX_TASK: 0x3ffc8d9c   c6 01 9f b7 12 d3 ef 00  5f 11 9f b7 12 d3 ef 00  |........_.......|[0m
+[0;32mI (13105) RX_TASK: 0x3ffc8dac   f8 20 9f b7 12 d3 ef 00  91 30 9f b7 12 d3 ef 00  |. .......0......|[0m
+[0;32mI (13115) RX_TASK: 0x3ffc8dbc   2a 40 9f b7 12 d3 ef 00  c3 4f 9f b7 12 d3 ef 00  |*@.......O......|[0m
+[0;32mI (13125) RX_TASK: 0x3ffc8dcc   5c 5f 9f b7 12 d3 ef 00  f5 6e 9f b7 12 d3 ef 00  |\_.......n......|[0m
+[0;32mI (13135) RX_TASK: 0x3ffc8ddc   8e 7e 9f b7 12 d3 ef 00  27 8e 9f b7 12 d3 ef 00  |.~......'.......|[0m
+[0;32mI (13145) RX_TASK: 0x3ffc8dec   c0 9d 9f b7 12 d3 ef 00  59 ad 9f b7 12 d3 ef 00  |........Y.......|[0m
+[0;32mI (13145) RX_TASK: 0x3ffc8dfc   f2 bc 9f b7 12 d3 ef 00  8b cc 9f b7 12 d3 ef 00  |................|[0m
+[0;32mI (13155) RX_TASK: 0x3ffc8e0c   24 dc 9f b7 12 d3 ef 00  bd eb 9f b7 12 d3 ef 00  |$...............|[0m
+[0;32mI (13165) RX_TASK: 0x3ffc8e1c   56 fb 9f b7 12 d3 ef 00  ef 0a a0 b7 12 d3 ef 00  |V...............|[0m
+[0;32mI (13175) RX_TASK: 0x3ffc8e2c   88 1a a0 b7 12 d3 ef 00  21 2a a0 b7 12 d3 ef 00  |........!*......|[0m
+[0;32mI (13185) RX_TASK: 0x3ffc8e3c   ba 39 a0 b7 12 d3 ef 00  53 49 a0 b7 12 d3 ef 00  |.9......SI......|[0m
+[0;32mI (13195) RX_TASK: 0x3ffc8e4c   ed 58 a0 b7 12 d3 ef 00  86 68 a0 b7 12 d3 ef 00  |.X.......h......|[0m
+[0;32mI (13205) RX_TASK: 0x3ffc8e5c   1f 78 a0 b7 12 d3 ef 00  d8 86 a0 b7 12 d3 ef 00  |.x..............|[0m
+[0;32mI (13215) RX_TASK: 0x3ffc8e6c   94 99 a0 b7 12 d3 ef 00  f9 a6 a0 b7 12 d3 ef 00  |................|[0m
+[0;32mI (13215) RX_TASK: 0x3ffc8e7c   7e b6 a0 b7 12 d3 ef 00  18 c6 a0 b7 12 d3 ef 00  |~...............|[0m
+[0;32mI (13225) RX_TASK: 0x3ffc8e8c   b1 d5 a0 b7 12 d3 ef 00  4a e5 a0 b7 12 d3 ef 00  |........J.......|[0m
+[0;32mI (13235) RX_TASK: 0x3ffc8e9c   e3 f4 a0 b7 12 d3 ef 00  7c 04 a1 b7 12 d3 ef 00  |........|.......|[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (30) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb  3 2026 22:21:52[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1927ch (103036) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=000292a4 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (130) esp_image: segment 2: paddr=0002d1cc vaddr=40080000 size=02e4ch ( 11852) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7ce64h (511588) map[0m
+[0;32mI (310) esp_image: segment 4: paddr=000ace8c vaddr=40082e4c size=15f58h ( 89944) load[0m
+[0;32mI (345) esp_image: segment 5: paddr=000c2dec vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (357) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (357) boot: Disabling RNG early entropy source...[0m
+[0;32mI (368) cpu_start: Multicore app[0m
+[0;32mI (376) cpu_start: Pro cpu start user code[0m
+[0;32mI (376) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (376) app_init: Application information:[0m
+[0;32mI (376) app_init: Project name:     esp-tsf-time-sync[0m
+[0;32mI (381) app_init: App version:      1[0m
+[0;32mI (385) app_init: Compile time:     Feb  3 2026 22:26:48[0m
+[0;32mI (390) app_init: ELF file SHA256:  a96e33164...[0m
+[0;32mI (394) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (398) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (402) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (406) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (410) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (416) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (421) heap_init: At 3FFB7F88 len 00028078 (160 KiB): DRAM[0m
+[0;32mI (426) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (431) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (437) heap_init: At 40098DA4 len 0000725C (28 KiB): IRAM[0m
+[0;33mW (443) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (455) spi_flash: detected chip: generic[0m
+[0;32mI (459) spi_flash: flash io: dio[0m
+[0;33mW (462) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (475) main_task: Started on CPU0[0m
+[0;32mI (485) main_task: Calling app_main()[0m
+[0;32mI (505) main: ESP_WIFI_MODE_STA[0m
+[0;32mI (515) wifi:wifi driver task: 3ffbff84, prio:23, stack:6656, core=0[0m
+[0;32mI (525) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (525) wifi:wifi certification version: v7.0[0m
+[0;32mI (525) wifi:config NVS flash: enabled[0m
+[0;32mI (525) wifi:config nano formatting: disabled[0m
+[0;32mI (535) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (535) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (535) wifi:Init management short buffer num: 32[0m
+[0;32mI (545) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (545) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (555) wifi:Init static rx buffer num: 10[0m
+[0;32mI (555) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (565) wifi_init: rx ba win: 6[0m
+[0;32mI (565) wifi_init: accept mbox: 6[0m
+[0;32mI (565) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp tx win: 5760[0m
+[0;32mI (575) wifi_init: tcp rx win: 5760[0m
+[0;32mI (575) wifi_init: tcp mss: 1440[0m
+[0;32mI (585) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (585) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (595) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (675) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (695) wifi:mode : sta (40:22:d8:5a:4a:08)[0m
+[0;32mI (695) wifi:enable tsf[0m
+[0;32mI (705) wifi station: wifi_init_sta finished.[0m
+[0;32mI (785) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (785) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1975) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2015) wifi:Association refused temporarily time 1269, comeback time 1369 (TUs)[0m
+[0;32mI (3415) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (4615) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4625) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4665) wifi:connected with Pixel_6085, aid = 2, channel 10, BW20, bssid = 36:0c:8c:ca:91:fb[0m
+[0;32mI (4665) wifi:security: WPA3-SAE, phy: bgn, rssi: -52[0m
+[0;32mI (4665) wifi:pm start, type: 1[0m
+
+[0;32mI (4665) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4755) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (4755) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m

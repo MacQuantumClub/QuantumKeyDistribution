@@ -1,0 +1,6 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python -DESP_PLATFORM=1 -DSDKCONFIG_DEFAULTS=sdkconfig.defaults;sdkconfig.defaults.slave -DCCACHE_ENABLE=0 /home/dani/esp-tsf-time-sync
+-- Minimal build - ON
+-- git rev-parse returned 'fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32

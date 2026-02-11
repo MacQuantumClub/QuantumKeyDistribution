@@ -1,0 +1,173 @@
+Command: /home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/dani/Documents/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/dani/esp-tsf-time-sync/slave/esp-tsf-time-sync.elf /home/dani/esp-tsf-time-sync/slave/bootloader/bootloader.elf -m '/home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/dani/Documents/esp/esp-idf/tools/idf.py' '-B' 'slave' '-DSDKCONFIG_DEFAULTS=sdkconfig.defaults;sdkconfig.defaults.slave' '-p' '/dev/ttyUSB1'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Feb  3 2026 22:21:52[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1922ch (102956) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=00029254 vaddr=3ffb0000 size=03f0ch ( 16140) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0002d168 vaddr=40080000 size=02eb0h ( 11952) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7cc80h (511104) map[0m
+[0;32mI (309) esp_image: segment 4: paddr=000acca8 vaddr=40082eb0 size=15e20h ( 89632) load[0m
+[0;32mI (344) esp_image: segment 5: paddr=000c2ad0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (357) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (357) boot: Disabling RNG early entropy source...[0m
+[0;32mI (367) cpu_start: Multicore app[0m
+[0;32mI (376) cpu_start: Pro cpu start user code[0m
+[0;32mI (376) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (376) app_init: Application information:[0m
+[0;32mI (376) app_init: Project name:     esp-tsf-time-sync[0m
+[0;32mI (380) app_init: App version:      1[0m
+[0;32mI (384) app_init: Compile time:     Feb  3 2026 22:26:48[0m
+[0;32mI (389) app_init: ELF file SHA256:  746be6eaa...[0m
+[0;32mI (393) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (397) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (401) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (405) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (409) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (415) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFB7F78 len 00028088 (160 KiB): DRAM[0m
+[0;32mI (425) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (431) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (436) heap_init: At 40098CD0 len 00007330 (28 KiB): IRAM[0m
+[0;33mW (443) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (455) spi_flash: detected chip: generic[0m
+[0;32mI (458) spi_flash: flash io: dio[0m
+[0;33mW (461) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (474) main_task: Started on CPU0[0m
+[0;32mI (484) main_task: Calling app_main()[0m
+[0;32mI (504) main: ESP_WIFI_MODE_STA[0m
+[0;32mI (514) wifi:wifi driver task: 3ffbff74, prio:23, stack:6656, core=0[0m
+[0;32mI (524) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (524) wifi:wifi certification version: v7.0[0m
+[0;32mI (524) wifi:config NVS flash: enabled[0m
+[0;32mI (524) wifi:config nano formatting: disabled[0m
+[0;32mI (534) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (534) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (534) wifi:Init management short buffer num: 32[0m
+[0;32mI (544) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (554) wifi:Init static rx buffer num: 10[0m
+[0;32mI (554) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (564) wifi_init: rx ba win: 6[0m
+[0;32mI (564) wifi_init: accept mbox: 6[0m
+[0;32mI (564) wifi_init: tcpip mbox: 32[0m
+[0;32mI (564) wifi_init: udp mbox: 6[0m
+[0;32mI (574) wifi_init: tcp mbox: 6[0m
+[0;32mI (574) wifi_init: tcp tx win: 5760[0m
+[0;32mI (574) wifi_init: tcp rx win: 5760[0m
+[0;32mI (584) wifi_init: tcp mss: 1440[0m
+[0;32mI (584) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (584) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (594) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (684) wifi:mode : sta (40:22:d8:5a:4a:08)[0m
+[0;32mI (684) wifi:enable tsf[0m
+[0;32mI (684) wifi station: wifi_init_sta finished.[0m
+[0;32mI (694) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (694) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1904) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1914) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1924) wifi:connected with Pixel_6085, aid = 2, channel 10, BW20, bssid = 36:0c:8c:ca:91:fb[0m
+[0;32mI (1924) wifi:security: WPA3-SAE, phy: bgn, rssi: -42[0m
+[0;32mI (1934) wifi:pm start, type: 1[0m
+
+[0;32mI (1934) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2004) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2004) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (14914) esp_netif_handlers: sta ip: 10.45.216.230, mask: 255.255.255.0, gw: 10.45.216.170[0m
+[0;32mI (14914) wifi station: got ip:10.45.216.230[0m
+[0;32mI (14914) wifi station: connected to ap SSID:Pixel_6085 password:2601195007[0m
+[0;32mI (14924) main: Reading Time[0m
+[0;32mI (14924) main_task: Returned from app_main()[0m
+[0;32mI (15574) OFFSET: ΔTSF = 3095 us[0m
+[0;32mI (16574) OFFSET: ΔTSF = 2816 us[0m
+[0;32mI (17574) OFFSET: ΔTSF = 2677 us[0m
+[0;32mI (18574) OFFSET: ΔTSF = 2714 us[0m
+[0;32mI (19574) OFFSET: ΔTSF = 2672 us[0m
+[0;32mI (20574) OFFSET: ΔTSF = 2671 us[0m
+[0;32mI (21574) OFFSET: ΔTSF = 2691 us[0m
+[0;32mI (22574) OFFSET: ΔTSF = 2770 us[0m
+[0;32mI (23574) OFFSET: ΔTSF = 2626 us[0m
+[0;32mI (24574) OFFSET: ΔTSF = 2641 us[0m
+[0;32mI (25574) OFFSET: ΔTSF = 2640 us[0m
+[0;32mI (26574) OFFSET: ΔTSF = 2124 us[0m
+[0;32mI (27574) OFFSET: ΔTSF = 2786 us[0m
+[0;32mI (28574) OFFSET: ΔTSF = 2683 us[0m
+[0;32mI (29574) OFFSET: ΔTSF = 2671 us[0m
+[0;32mI (30574) OFFSET: ΔTSF = 2698 us[0m
+[0;32mI (31574) OFFSET: ΔTSF = 2678 us[0m
+[0;32mI (32574) OFFSET: ΔTSF = 2619 us[0m
+[0;32mI (33574) OFFSET: ΔTSF = 2663 us[0m
+[0;32mI (34574) OFFSET: ΔTSF = 2638 us[0m
+[0;32mI (35574) OFFSET: ΔTSF = 2649 us[0m
+[0;32mI (36574) OFFSET: ΔTSF = 2702 us[0m
+[0;32mI (37574) OFFSET: ΔTSF = 2751 us[0m
+[0;32mI (38574) OFFSET: ΔTSF = 2716 us[0m
+[0;32mI (39574) OFFSET: ΔTSF = 2683 us[0m
+[0;32mI (40574) OFFSET: ΔTSF = 2620 us[0m
+[0;32mI (41574) OFFSET: ΔTSF = 2665 us[0m
+[0;32mI (42574) OFFSET: ΔTSF = 2641 us[0m
+[0;32mI (43574) OFFSET: ΔTSF = 2099 us[0m
+[0;32mI (44574) OFFSET: ΔTSF = 2711 us[0m
+[0;32mI (45574) OFFSET: ΔTSF = 2686 us[0m
+[0;32mI (46574) OFFSET: ΔTSF = 2666 us[0m
+[0;32mI (47574) OFFSET: ΔTSF = 2794 us[0m
+[0;32mI (48574) OFFSET: ΔTSF = 2702 us[0m
+[0;32mI (49574) OFFSET: ΔTSF = 2613 us[0m
+[0;32mI (50574) OFFSET: ΔTSF = 2674 us[0m
+[0;32mI (51574) OFFSET: ΔTSF = 2631 us[0m
+[0;32mI (52574) OFFSET: ΔTSF = 2663 us[0m
+[0;32mI (53574) OFFSET: ΔTSF = 2709 us[0m
+[0;32mI (54574) OFFSET: ΔTSF = 2670 us[0m
+[0;32mI (55574) OFFSET: ΔTSF = 2668 us[0m
+[0;32mI (56574) OFFSET: ΔTSF = 2693 us[0m
+[0;32mI (57574) OFFSET: ΔTSF = 2699 us[0m
+[0;32mI (58574) OFFSET: ΔTSF = 2600 us[0m
+[0;32mI (59574) OFFSET: ΔTSF = 2660 us[0m
+[0;32mI (60574) OFFSET: ΔTSF = 2100 us[0m
+[0;32mI (61574) OFFSET: ΔTSF = 2775 us[0m
+[0;32mI (62574) OFFSET: ΔTSF = 2663 us[0m
+[0;32mI (63574) OFFSET: ΔTSF = 2670 us[0m
+[0;32mI (64574) OFFSET: ΔTSF = 2683 us[0m
+[0;32mI (65574) OFFSET: ΔTSF = 2690 us[0m
+[0;32mI (66574) OFFSET: ΔTSF = 2609 us[0m
+[0;32mI (67574) OFFSET: ΔTSF = 2701 us[0m
+[0;32mI (68574) OFFSET: ΔTSF = 2639 us[0m
+[0;32mI (69574) OFFSET: ΔTSF = 2679 us[0m
+[0;32mI (70574) OFFSET: ΔTSF = 2717 us[0m
+[0;32mI (71574) OFFSET: ΔTSF = 2692 us[0m
+[0;32mI (72574) OFFSET: ΔTSF = 2675 us[0m
+[0;32mI (73574) OFFSET: ΔTSF = 2713 us[0m
+[0;32mI (74574) OFFSET: ΔTSF = 2681 us[0m
+[0;32mI (75574) OFFSET: ΔTSF = 2621 us[0m
+[0;32mI (76574) OFFSET: ΔTSF = 2666 us[0m
+[0;32mI (77574) OFFSET: ΔTSF = 3267 us[0m
+[0;32mI (78574) OFFSET: ΔTSF = 2746 us[0m
+[0;32mI (79574) OFFSET: ΔTSF = 2689 us[0m
+[0;32mI (80574) OFFSET: ΔTSF = 2662 us[0m
+[0;32mI (81574) OFFSET: ΔTSF = 2639 us[0m
+[0;32mI (82574) OFFSET: ΔTSF = 2685 us[0m
+[0;32mI (83574) OFFSET: ΔTSF = 2621 us[0m
+[0;32mI (84574) OFFSET: ΔTSF = 2673 us[0m
+[0;32mI (85574) OFFSET: ΔTSF = 2638 us[0m
+[0;32mI (86574) OFFSET: ΔTSF = 2742 us[0m

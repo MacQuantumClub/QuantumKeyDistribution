@@ -1,0 +1,21 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.espIdfPath": "/home/dani/Documents/esp/esp-idf",
+  "idf.pythonInstallPath": "/usr/bin/python",
+  "idf.openOcdConfigs": [
+    "interface/ftdi/esp_ftdi.cfg",
+    "target/esp32.cfg"
+  ],
+  "idf.port": "/dev/ttyUSB0",
+  "idf.toolsPath": "/home/dani/.espressif",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32"
+  },
+  "clangd.path": "/home/dani/.espressif/tools/esp-clang/esp-19.1.2_20250312/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=/home/dani/esp-tsf-time-sync/build"
+  ],
+  "idf.flashType": "UART"
+}

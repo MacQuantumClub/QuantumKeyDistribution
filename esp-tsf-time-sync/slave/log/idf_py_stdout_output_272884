@@ -1,0 +1,133 @@
+Command: /home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/dani/Documents/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/dani/esp-tsf-time-sync/slave/esp-tsf-time-sync.elf /home/dani/esp-tsf-time-sync/slave/bootloader/bootloader.elf -m '/home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/dani/Documents/esp/esp-idf/tools/idf.py' '-B' 'slave' '-DSDKCONFIG_DEFAULTS=sdkconfig.defaults;sdkconfig.defaults.slave' '-p' '/dev/ttyUSB1'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Feb  3 2026 22:21:52[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1925ch (103004) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=00029284 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0002d1ac vaddr=40080000 size=02e6ch ( 11884) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7ce54h (511572) map[0m
+[0;32mI (309) esp_image: segment 4: paddr=000ace7c vaddr=40082e6c size=15f38h ( 89912) load[0m
+[0;32mI (345) esp_image: segment 5: paddr=000c2dbc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (357) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (357) boot: Disabling RNG early entropy source...[0m
+[0;32mI (367) cpu_start: Multicore app[0m
+[0;32mI (376) cpu_start: Pro cpu start user code[0m
+[0;32mI (376) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (376) app_init: Application information:[0m
+[0;32mI (376) app_init: Project name:     esp-tsf-time-sync[0m
+[0;32mI (381) app_init: App version:      1[0m
+[0;32mI (384) app_init: Compile time:     Feb  3 2026 22:26:48[0m
+[0;32mI (389) app_init: ELF file SHA256:  4a4ec454a...[0m
+[0;32mI (394) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (397) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (401) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (405) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (409) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (415) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFB7F88 len 00028078 (160 KiB): DRAM[0m
+[0;32mI (426) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (431) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (437) heap_init: At 40098DA4 len 0000725C (28 KiB): IRAM[0m
+[0;33mW (443) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (455) spi_flash: detected chip: generic[0m
+[0;32mI (458) spi_flash: flash io: dio[0m
+[0;33mW (461) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (475) main_task: Started on CPU0[0m
+[0;32mI (485) main_task: Calling app_main()[0m
+[0;32mI (505) main: ESP_WIFI_MODE_STA[0m
+[0;32mI (515) wifi:wifi driver task: 3ffbff84, prio:23, stack:6656, core=0[0m
+[0;32mI (525) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (525) wifi:wifi certification version: v7.0[0m
+[0;32mI (525) wifi:config NVS flash: enabled[0m
+[0;32mI (525) wifi:config nano formatting: disabled[0m
+[0;32mI (535) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (535) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (535) wifi:Init management short buffer num: 32[0m
+[0;32mI (545) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (545) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (555) wifi:Init static rx buffer num: 10[0m
+[0;32mI (555) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (565) wifi_init: rx ba win: 6[0m
+[0;32mI (565) wifi_init: accept mbox: 6[0m
+[0;32mI (565) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp tx win: 5760[0m
+[0;32mI (575) wifi_init: tcp rx win: 5760[0m
+[0;32mI (575) wifi_init: tcp mss: 1440[0m
+[0;32mI (585) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (585) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (595) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (675) wifi:mode : sta (40:22:d8:5a:4a:08)[0m
+[0;32mI (685) wifi:enable tsf[0m
+[0;32mI (685) wifi station: wifi_init_sta finished.[0m
+[0;32mI (695) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (695) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1915) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1925) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1935) wifi:connected with Pixel_6085, aid = 2, channel 10, BW20, bssid = 36:0c:8c:ca:91:fb[0m
+[0;32mI (1935) wifi:security: WPA3-SAE, phy: bgn, rssi: -49[0m
+[0;32mI (1945) wifi:pm start, type: 1[0m
+
+[0;32mI (1945) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2005) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2005) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (34475) esp_netif_handlers: sta ip: 10.45.216.230, mask: 255.255.255.0, gw: 10.45.216.170[0m
+[0;32mI (34475) wifi station: got ip:10.45.216.230[0m
+[0;32mI (34475) wifi station: connected to ap SSID:Pixel_6085 password:2601195007[0m
+[0;32mI (34485) main: Reading Time[0m
+[0;32mI (34505) main_task: Returned from app_main()[0m
+[0;32mI (35615) RX_TASK: Read 8 bytes: '67504594663458448'[0m
+[0;32mI (35615) RX_TASK: 0x3ffc8a84   90 46 9f 39 12 d3 ef 00                           |.F.9....|[0m
+[0;32mI (36615) RX_TASK: Read 8 bytes: '67504594664458414'[0m
+[0;32mI (36615) RX_TASK: 0x3ffc8a84   ae 88 ae 39 12 d3 ef 00                           |...9....|[0m
+[0;32mI (37615) RX_TASK: Read 8 bytes: '67504594665458388'[0m
+[0;32mI (37615) RX_TASK: 0x3ffc8a84   d4 ca bd 39 12 d3 ef 00                           |...9....|[0m
+[0;32mI (38615) RX_TASK: Read 8 bytes: '67504594666458362'[0m
+[0;32mI (38615) RX_TASK: 0x3ffc8a84   fa 0c cd 39 12 d3 ef 00                           |...9....|[0m
+[0;32mI (39615) RX_TASK: Read 8 bytes: '67504594667458287'[0m
+[0;32mI (39615) RX_TASK: 0x3ffc8a84   ef 4e dc 39 12 d3 ef 00                           |.N.9....|[0m
+[0;32mI (40615) RX_TASK: Read 8 bytes: '67504594668458271'[0m
+[0;32mI (40615) RX_TASK: 0x3ffc8a84   1f 91 eb 39 12 d3 ef 00                           |...9....|[0m
+[0;32mI (41615) RX_TASK: Read 8 bytes: '67504594669458261'[0m
+[0;32mI (41615) RX_TASK: 0x3ffc8a84   55 d3 fa 39 12 d3 ef 00                           |U..9....|[0m
+[0;32mI (42615) RX_TASK: Read 8 bytes: '67504594670458237'[0m
+[0;32mI (42615) RX_TASK: 0x3ffc8a84   7d 15 0a 3a 12 d3 ef 00                           |}..:....|[0m
+[0;32mI (43615) RX_TASK: Read 8 bytes: '67504594671458315'[0m
+[0;32mI (43615) RX_TASK: 0x3ffc8a84   0b 58 19 3a 12 d3 ef 00                           |.X.:....|[0m
+[0;32mI (44615) RX_TASK: Read 8 bytes: '67504594672458200'[0m
+[0;32mI (44615) RX_TASK: 0x3ffc8a84   d8 99 28 3a 12 d3 ef 00                           |..(:....|[0m
+[0;32mI (45615) RX_TASK: Read 8 bytes: '67504594673458183'[0m
+[0;32mI (45615) RX_TASK: 0x3ffc8a84   07 dc 37 3a 12 d3 ef 00                           |..7:....|[0m
+[0;32mI (46615) RX_TASK: Read 8 bytes: '67504594674458159'[0m
+[0;32mI (46615) RX_TASK: 0x3ffc8a84   2f 1e 47 3a 12 d3 ef 00                           |/.G:....|[0m
+[0;32mI (47615) RX_TASK: Read 8 bytes: '67504594675458139'[0m
+[0;32mI (47615) RX_TASK: 0x3ffc8a84   5b 60 56 3a 12 d3 ef 00                           |[`V:....|[0m
+[0;32mI (48615) RX_TASK: Read 8 bytes: '67504594676457587'[0m
+[0;32mI (48615) RX_TASK: 0x3ffc8a84   73 a0 65 3a 12 d3 ef 00                           |s.e:....|[0m
+[0;32mI (49615) RX_TASK: Read 8 bytes: '67504594677458102'[0m
+[0;32mI (49615) RX_TASK: 0x3ffc8a84   b6 e4 74 3a 12 d3 ef 00                           |..t:....|[0m
+[0;32mI (50615) RX_TASK: Read 8 bytes: '67504594678457508'[0m
+[0;32mI (50615) RX_TASK: 0x3ffc8a84   a4 24 84 3a 12 d3 ef 00                           |.$.:....|[0m

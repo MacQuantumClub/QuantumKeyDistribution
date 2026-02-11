@@ -1,0 +1,30 @@
+Command: /home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/dani/Documents/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/dani/esp-tsf-time-sync/slave/esp-tsf-time-sync.elf /home/dani/esp-tsf-time-sync/slave/bootloader/bootloader.elf -m '/home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/dani/Documents/esp/esp-idf/tools/idf.py' '-B' 'slave' '-DSDKCONFIG_DEFAULTS=sdkconfig.defaults;sdkconfig.defaults.slave' '-p' '/dev/ttyUSB1'
+[0;33m--- esp-idf-monitor 1.9.0 on /dev/ttyUSB1 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400014fd: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x400014fd: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x4000150d: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x400014fa: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x4013c86a: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m1521[0m
+[0m--- 0x401375a5: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c[0m[0m:[1;31m34[0m
+[0m--- 0x40090187: [0;33mesp_log_va[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x400d93c6: [0;33mrx_task[0m[0m at [0;32m/home/dani/esp-tsf-time-sync/main/uart.c[0m[0m:[1;31m62[0m
+[0m--- 0x4008a691: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400014fd: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x400014fd: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x4000150d: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x400014fa: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x4013c86a: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m1521[0m
+[0m--- 0x401375a5: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c[0m[0m:[1;31m34[0m
+[0m--- 0x40090187: [0;33mesp_log_va[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x400d93c6: [0;33mrx_task[0m[0m at [0;32m/home/dani/esp-tsf-time-sync/main/uart.c[0m[0m:[1;31m62[0m
+[0m--- 0x4008a691: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

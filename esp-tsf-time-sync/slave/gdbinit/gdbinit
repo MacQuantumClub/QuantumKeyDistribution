@@ -1,0 +1,2 @@
+source /home/dani/esp-tsf-time-sync/slave/gdbinit/symbols
+source /home/dani/esp-tsf-time-sync/slave/gdbinit/connect

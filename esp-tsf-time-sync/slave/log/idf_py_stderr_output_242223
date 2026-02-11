@@ -1,0 +1,14 @@
+Command: /home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/dani/Documents/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/dani/esp-tsf-time-sync/slave/esp-tsf-time-sync.elf /home/dani/esp-tsf-time-sync/slave/bootloader/bootloader.elf -m '/home/dani/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/dani/Documents/esp/esp-idf/tools/idf.py' '-B' 'slave' '-DSDKCONFIG_DEFAULTS=sdkconfig.defaults;sdkconfig.defaults.slave' '-p' '/dev/ttyUSB1'
+[0;33m--- esp-idf-monitor 1.9.0 on /dev/ttyUSB1 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4008409e: [0;33mesp_crosscore_isr[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40082fad: [0;33m_xt_lowint1[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x4008a9ee: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m560[0m
+[0m--- (inlined by) [0;33mvPortExitCritical[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m514[0m
+[0m--- 0x400d7631: [0;33muart_get_buffered_data_len[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/esp_driver_uart/src/uart.c[0m[0m:[1;31m1670[0m
+[0m--- 0x400d9373: [0;33mrx_task[0m[0m at [0;32m/home/dani/esp-tsf-time-sync/main/uart.c[0m[0m:[1;31m57[0m
+[0m--- 0x4008a691: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/dani/Documents/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m
