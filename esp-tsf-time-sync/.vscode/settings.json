@@ -17,5 +17,6 @@
     "--query-driver=**",
     "--compile-commands-dir=/home/dani/esp-tsf-time-sync/build"
   ],
-  "idf.flashType": "UART"
+  "idf.flashType": "UART",
+  "idf.currentSetup": "/home/dani/Documents/esp/esp-idf"
 }
