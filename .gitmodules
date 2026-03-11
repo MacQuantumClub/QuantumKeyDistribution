@@ -1,3 +1,6 @@
 [submodule "OpenWiFiSync-Quantam"]
 	path = OpenWiFiSync-Quantam
 	url = https://github.com/stormy232/OpenWiFiSync-Quantam.git
+[submodule "fts"]
+	path = fts
+	url = https://github.com/stormy232/fts.git
