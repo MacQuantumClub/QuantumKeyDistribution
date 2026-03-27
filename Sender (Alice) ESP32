@@ -1,0 +1,168 @@
+#include "WiFi.h"
+#include <esp_now.h>
+#include <WiFi.h>
+
+// WIFI: REPLACE WITH YOUR RECEIVER MAC Address
+uint8_t broadcastAddress[] = {0xA4, 0xF0, 0x0F, 0x68, 0xB9, 0x00};
+
+// WIFI: Structure example to send data
+// WIFI: Must match the receiver structure
+typedef struct  __attribute__((packed)) struct_message {
+  int b;
+  float c;
+  bool d;
+
+  int bases[32][2];
+  int bitstring[32];
+} struct_message;
+
+// WIFI: Create a struct_message called myData
+struct_message myData;
+
+
+
+esp_now_peer_info_t peerInfo;
+
+// WIFI: callback when data is sent
+void OnDataSent(const wifi_tx_info_t *mac_addr, esp_now_send_status_t status) {
+  Serial.print("\r\nLast Packet Send Status:\t");
+  Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
+}
+ 
+
+// QKD:
+// Store all the bases
+int track_bases[32][2] = {};
+
+
+// Increment rotateplates function in loop() up to 32 for bitstring
+int i=0;
+
+// Used in loop().
+int track_bases_not_sent = true;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(2, OUTPUT);
+  Serial.begin(115200);
+  WiFi.mode(WIFI_MODE_STA);
+  //delay(10000);
+  Serial.println("Hi");
+  Serial.println(WiFi.macAddress());
+  delay(1000);
+  Serial.println("hELLO");
+
+  //WIFI
+  myData.b = 67;
+  myData.c = 6.7;
+  myData.d = true;
+
+  // WIFI: Init ESP-NOW
+  if (esp_now_init() != ESP_OK) {
+    Serial.println("Error initializing ESP-NOW");
+    return;
+  }
+
+  // WIFI: Once ESPNow is successfully Init, we will register for Send CB to
+  // WIFI: get the status of Transmitted packet
+  esp_now_register_send_cb(OnDataSent);
+
+  // WIFI: Register peer
+  memcpy(peerInfo.peer_addr, broadcastAddress, 6);
+  peerInfo.channel = 0;  
+  peerInfo.encrypt = false;
+  
+  // WIFI: Add peer        
+  if (esp_now_add_peer(&peerInfo) != ESP_OK){
+    Serial.println("Failed to add peer");
+    return;
+  }
+
+
+
+  //Generate random bitstring
+
+  int bitstring[32];
+  for (int i=0;i<32;i++){
+    bitstring[i] = random(0,2);
+  }
+
+  for(int i=0;i<32;i++){
+    myData.bitstring[i] = bitstring[i];
+  }
+
+
+}
+
+void rotatePlates(int i){
+  Serial.println(i);
+  Serial.println("Entire bit string has been sent.");
+  Serial.println("Sending all public bases...");
+  Serial.println();
+
+
+  for(int j=0;j<32;j++){
+    myData.bases[j][0] = track_bases[j][0];
+    myData.bases[j][1] = track_bases[j][1];
+  }
+
+  // put your main code here, to run repeatedly:
+  String c = "";
+  if (Serial.available() > 0) {
+    c = Serial.readStringUntil('\n');
+  }
+
+  // Generate random basis
+
+  int basis_bit_1 = random(0,2);
+  int basis_bit_2 = random(0,2);
+
+  int gen_basis[2] = {basis_bit_1,basis_bit_2};
+
+  // Add to final track_bases list
+  track_bases[i][0] = gen_basis[0];
+  track_bases[i][1] = gen_basis[1];
+
+
+  if (c == "Y"){
+    digitalWrite(2, HIGH);
+  }
+  else if (c== "N") {
+    digitalWrite(2,LOW);
+  }
+
+  // WIFI: Set values to send
+  //myData.b = random(1,20);
+  //myData.c = 1.2;
+  //myData.d = false;
+  //myData.basis[0] = gen_basis[0];
+  //myData.basis[1] = gen_basis[1];
+
+  //delay(2000);
+
+}
+
+void loop() {
+  // loop counter ie. bitstring counter
+  if(i>=32 && track_bases_not_sent){
+
+    // WIFI: Send the bases via ESP-NOW
+    esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &myData, sizeof(myData));
+   
+    if (result == ESP_OK) {
+      Serial.println("Sent Alice's Bases with success!");
+    }
+    else {
+      Serial.println("Error sending the data (Alice's Bases)");
+    }
+
+    track_bases_not_sent = false; // because track_bases has now been sent.
+  }
+
+  else if (track_bases_not_sent){
+    rotatePlates(i);
+  }
+
+  i++;
+
+}
